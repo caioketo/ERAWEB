@@ -1,0 +1,28 @@
+﻿@model ERAWeb.Models.AvisoListModel
+
+@{
+    ViewBag.Title = "Avisos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="titulo">Avisos para os Pais</h1>
+<table class="tableAvisos">
+    @foreach (var item in Model.Avisos)
+    {
+        <tr>
+            <td>
+                <span class="avisos">
+                    @Html.Raw(item.Aviso)
+                </span>
+                @foreach (var arquivo in item.Arquivos)
+                {
+                    <br />
+                    <a class="arquivo" href="~/Content/Arquivos/@arquivo.Arquivo">-@arquivo.Descricao</a>
+                }
+            </td>
+
+        </tr>
+        <tr class="space"></tr>
+    }
+
+</table>

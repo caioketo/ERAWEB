@@ -1,0 +1,64 @@
+﻿@model ERAWeb.Models.SelecionaSerieModel
+
+@{
+    ViewBag.Title = "_SelectTurma";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="subTitulo" style="text-align:center;">Selecione a Turma</h1>
+<br />
+<br />
+<table class="table centerTable" align="center">
+    @foreach (var item in Model.Cursos)
+    {
+
+        <tr class='clickableRow' href="@item.Id">
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+        </tr>
+        foreach (var turma in item.Turmas)
+        {
+            <tr class='clickableRow turmaRow @item.Id' id="@item.Id" href="@Url.Action("Selecionar", "Agenda", new { id = turma.Id, next = Model.HRef })">
+                <td>
+                    @if (turma.Serie != 0)
+                    {
+                        <span>@Html.DisplayFor(modelItem => turma.Serie)º Ano @Html.DisplayFor(modelItem => turma.Descricao)</span>
+                    }
+                    else
+                    {
+                        <span>@Html.DisplayFor(modelItem => turma.Descricao)</span>
+                    }
+                    
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+<script>
+    jQuery(document).ready(function ($) {
+        $(".clickableRow").click(function () {
+            var id = $(this).attr("href");
+            $(".clickableRow").not(this).removeClass("activeExpandable");
+            $(this).toggleClass("activeExpandable");
+            $(".turmaRow").each(function (index) {
+                var idTurma = $(this).attr('id');
+                if (idTurma == id) {
+                    $(this).fadeToggle("fast");
+                }
+                else {
+                    $(this).hide();
+                }
+            });
+        });
+        $(".turmaRow").click(function () {
+            window.document.location = $(this).attr("href");
+        });
+    });
+</script>

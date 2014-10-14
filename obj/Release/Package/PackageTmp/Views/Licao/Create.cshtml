@@ -1,0 +1,69 @@
+﻿@model ERAWeb.Models.LicaoModel
+
+@{
+    ViewBag.Title = "Lição";
+}
+
+<h2>Lição</h2>
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.DataLicao)</b>
+            </span>
+            @Html.TextBoxFor(model => model.DataLicao, new { @class = "form-control datepicker", placeholder = "Selecione a data..." })
+            @Html.ValidationMessageFor(model => model.DataLicao)
+        </p>
+
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.TurmaId)</b>
+            </span>
+            @Html.DropDownList("TurmaId", null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.TurmaId)
+        </p>
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.DisciplinaId)</b>
+            </span>
+            @Html.DropDownList("DisciplinaId", null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.DisciplinaId)
+        </p>
+
+        <p>
+            <label class="h2">
+                <b>@Html.DisplayNameFor(model => model.Conteudo)</b>
+            </label>
+            @Html.TextAreaFor(model => model.Conteudo, new { @class = "form-control", @style = "height:300px; width:800px;" })
+            @Html.ValidationMessageFor(model => model.Conteudo)
+        </p>
+
+        <p>
+            <input type="submit" value="Cadastrar" class="btn btn-info" style="width:100%;" />
+        </p>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-info" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(function () { // will trigger when the document is ready
+            $('.datepicker').datepicker(); //Initialise any date pickers
+        });
+    </script>
+}

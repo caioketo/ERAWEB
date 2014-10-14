@@ -1,0 +1,104 @@
+﻿@model ERAWeb.Models.LicaoListModel
+
+@{
+    ViewBag.Title = "Licoes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="titulo">Lições</h1>
+<h2 class="subTitulo">@Model.TurmaDescricao</h2>
+
+<table style="width: 100%;">
+    <tr>
+        <td class="clickableRow borderRow" id="1">Jan</td>
+        <td class="clickableRow borderRow" id="2">Fev</td>
+        <td class="clickableRow borderRow" id="3">Mar</td>
+        <td class="clickableRow borderRow" id="4">Abr</td>
+        <td class="clickableRow borderRow" id="5">Mai</td>
+        <td class="clickableRow borderRow" id="6">Jun</td>
+        <td class="clickableRow borderRow" id="7">Jul</td>
+        <td class="clickableRow borderRow" id="8">Ago</td>
+        <td class="clickableRow borderRow" id="9">Set</td>
+        <td class="clickableRow borderRow" id="10">Out</td>
+        <td class="clickableRow borderRow" id="11">Nov</td>
+        <td class="clickableRow borderRow" id="12">Dez</td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+<table id="licoes" class="table">
+    <tr>
+        <th class="provasHeader dataHeader">
+            Data
+        </th>
+        <th class="provasHeader materiaHeader">
+            Disciplina
+        </th>
+        <th class="provasHeader Descricao">
+            Conteúdo
+        </th>
+    </tr>
+@foreach (var item in Model.Licoes) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataLicaoFormatada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Disciplina.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conteudo)
+        </td>
+    </tr>
+}
+
+</table>
+
+
+<script>
+    var tblProvas;
+    var turmaId = @Model.TurmaId;
+    $(function () {
+        var mesID = new Date().getMonth() + 1;
+        $.ajax({
+                url: "@Url.Action("LicoesMes", "Agenda")",
+                type: "GET",
+            data: {
+                id: turmaId,
+                mes : mesID
+            },
+            success: function (e) {
+                $("#licoes tr td").parents("tr").remove();
+                var provasObj = JSON.parse(e);
+                for (var i = 0; i < provasObj.length; i++) {
+                    var rowInfo = provasObj[i];
+                    var row_data = "";
+                    row_data += '<tr class="provaRow"> <td class="centerCol provaRow">' + rowInfo.DataLicao + '</td><td class="centerCol provaRow">' + rowInfo.Disciplina + '</td><td class="provaRow">' + rowInfo.Conteudo + '</td></tr>';
+                    $("#licoes").append(row_data);
+                }
+            }
+        });
+        $(".borderRow").click(function () {
+            mesID = $(this).attr('id');
+            $.ajax({
+                url: "@Url.Action("LicoesMes", "Agenda")",
+                type: "GET",
+                data: {
+                    id: turmaId,
+                    mes : mesID
+                },
+                success: function (e) {
+                    $("#licoes tr td").parents("tr").remove();
+                    var provasObj = JSON.parse(e);
+                    for (var i = 0; i < provasObj.length; i++) {
+                        var rowInfo = provasObj[i];
+                        var row_data = "";
+                        row_data += '<tr class="provaRow"> <td class="centerCol provaRow">' + rowInfo.DataLicao + '</td><td class="centerCol provaRow">' + rowInfo.Disciplina + '</td><td class="provaRow">' + rowInfo.Conteudo + '</td></tr>';
+                        $("#licoes").append(row_data);
+                    }
+                }
+            });
+        });
+    });
+</script>

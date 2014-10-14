@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div id="escola" class="txt1">
+    <h1 class="title1" style="color:#319bf2;">Contato</h1>
+    <p>
+
+        <span style="font-size:16px;">Preencha os campos abaixo para nos enviar um e-mail:</span>
+    </p><p>
+        <br>
+    </p><form name="contato" method="post" action="contato.php?flag=1">
+        <b>Nome</b><br>
+        <input type="text" name="nome" id="nome" class="txt1" style="width:520px;" required=""><p>
+            <b>E-mail</b><br>
+            <input type="text" name="email" id="email" class="txt1" style="width:520px;" required="">
+        </p><p>
+            <b>Telefone</b><br>
+            <input type="text" name="tel" id="tel" class="txt1" style="width:520px;" required="">
+        </p><p>
+
+            <b> Mensagem</b><br>
+            <textarea name="msg" id="msg" class="txt1" style="width:520px; height:80px;" required="" rows="0" cols="0"></textarea>
+        </p><p>
+            <input type="submit" name="enviar" value="Enviar" class="btn btn-success">
+
+        </p>
+    </form>
+
+
+
+</div>
+

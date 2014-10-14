@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @Scripts.Render("~/bundles/jquery")
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- ESTILOS BASICOS -->
+    <link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="~/Content/estilos2.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="~/Content/styles.css" type="text/css" media="screen">
+
+
+    <!-- SHADOWBOX -->
+    <link rel="stylesheet" type="text/css" href="~/Content/shadowbox.css">
+
+    <!-- FUNCÕES BASICAS -->
+    <script src="~/Scripts/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Scripts/shadowbox.js"></script>
+
+    <!-- INFO GOOGLE --> 
+    <meta name="description" content="A Escola Regina Altman atua na cidade de Santos desde agosto de 1982 utilizando-se de um ensino com visão global do ser humano. Educação Infantil e Ensino Fundamental">
+    <meta name="Author" content="onlyx web+design">
+    <meta name="keywords" content="regina altman, escola, educação, educação infantil, ensino fundamental, santos, colégio">
+    <title>Escola Regina Altman - Educação Infantil e Ensino Fundamental</title>
+    <link rel="canonical" href="http://www.escolareginaaltman.com.br/">
+    <style type="text/css">
+        #rodape {
+            position: absolute;
+            top: 1000px;    
+            margin-left: 0px;
+            background-image: url(../Content/Images/rodape.jpg);
+            background-repeat: repeat-x;
+            height: 220px;
+            width: 100%;
+        }
+    </style>
+
+    <script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>
+</head>
+<body>
+
+    <!-- fundo menina e cores -->
+    <div id="fundo"></div>
+
+    <div id="conteudo">
+
+        <!-- menu topo e menu lateral -->
+        <!-- MENU TOPO -->
+        <div id="menu" class="menux">
+            <span style="z-index:9999; position:absolute; top:14px; left:20px;">
+                <a href="principal" style="position:absolute;" onmouseover="inicio()">INÍCIO</a>
+                <a href="escola" style="position:absolute; left:52px; width:100px;" onmouseover="escola()">A ESCOLA</a>
+                <a href="equipe" style="position:absolute; left:126px; width:100px;" onmouseover="equipe()">NOSSA EQUIPE</a>
+                <a href="ambientes" style="position:absolute; left:226px; width:100px;" onmouseover="ambiente()">AMBIENTES</a>
+                <a href="galerias" style="position:absolute; left:306px; width:150px;" onmouseover="galeria()">GALERIA DE FOTOS</a>
+                <a href="contato" style="position:absolute; left:430px; width:150px;" onmouseover="contato()">CONTATO</a>
+                <!--&nbsp;<a href="inicio.php" target="meio" onMouseOver="inicio()">INÍCIO</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="escola.php" target="meio" onMouseOver="escola()">A ESCOLA</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="equipe.php" target="meio" onMouseOver="equipe()">NOSSA EQUIPE</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ambientes.php" target="meio" onMouseOver="ambiente()">AMBIENTES</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="galeria.php" target="meio" onMouseOver="galeria()">GALERIA DE FOTOS</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="contato.php" target="meio" onMouseOver="contato()">CONTATO</a>
+                -->
+            </span>
+            <div id="menuz" style="left: 55px; width: 80px;"></div>
+        </div>
+
+        <!-- MENU 2 LATERAL ESQUERDO -->
+        <div id="menu2" align="right">
+            <div class="menux2" style="background-color:#86b22a;">Ensinos</div><br>
+            <a href="educacaoinfantil" class="x1" onmouseover="opact('#x1')" onmouseout="opactx('#x1')">Educação Infantil</a> <img id="x1" src="~/Content/Images/menux.jpg" alt="menux.jpg"><div class="barra"></div><br>
+            <a href="ensinofundamental" class="x1" onmouseover="opact('#x2')" onmouseout="opactx('#x2')">Ensino Fundamental</a> <img id="x2" src="~/Content/Images/menux.jpg" alt="menux.jpg"><div class="barra"></div><p>
+                <br>
+
+            </p><div class="menux2" style="background-color:#319bf2;">Agenda</div><br>
+            <a href="cal_licoes.php" class="x1" onmouseover="opact('#x3')" onmouseout="opactx('#x3')">Calendário de lições</a> <img id="x3" src="~/Content/Images/menux2.jpg" alt="menux2.jpg"><div class="barra"></div><br>
+            <a href="cal_provasx.php" class="x1" onmouseover="opact('#x4')" onmouseout="opactx('#x4')">Calendário de provas</a> <img id="x4" src="~/Content/Images/menux2.jpg" alt="menux2.jpg"><div class="barra"></div><br>
+            <a href="cal_aluno.php" class="x2" onmouseover="opact('#x5')" onmouseout="opactx('#x5')"><img src="~/Content/Images/aviso.png"> <font style="font-size:14px;"><b>Avisos para Pais e Alunos</b></font></a>
+            <img id="x5" src="~/Content/Images/menux2.jpg" alt="menux2.jpg"><div class="barra"></div><p>
+                <br>
+                <a href="eventos.php" class="x1" onmouseover="opact('#x10')" onmouseout="opactx('#x10')">Eventos</a> <img id="x10" src="~/Content/Images/menux2.jpg" alt="menux2.jpg">
+            </p><div class="barra"></div><br>
+
+            <div class="menux2" style="background-color:#ab2524;">Institucional</div><br>
+            <a href="agendevisita" class="x1" onmouseover="opact('#x6')" onmouseout="opactx('#x6')">Agende uma visita</a> <img id="x6" src="~/Content/Images/menux3.jpg" alt="menux3.jpg"><div class="barra"></div><br>
+            <a href="transporteescolar" class="x1" onmouseover="opact('#x7')" onmouseout="opactx('#x7')">Transporte Escolar</a> <img id="x7" src="~/Content/Images/menux3.jpg" alt="menux3.jpg"><div class="barra"></div><br>
+            <a href="textosinteressantes" class="x1" onmouseover="opact('#x8')" onmouseout="opactx('#x8')">Textos Interessantes</a> <img id="x8" src="~/Content/Images/menux3.jpg" alt="menux3.jpg"><div class="barra"></div><br>
+            <a href="localizacao" class="x1" onmouseover="opact('#x9')" onmouseout="opactx('#x9')">Localização</a> <img id="x9" src="~/Content/Images/menux3.jpg" alt="menux3.jpg"><div class="barra"></div><p>
+                <br>
+            </p>
+        </div>
+        <div id="meio">
+            @RenderBody()
+        </div>
+
+    </div>
+    <div id="rodape" style="display: block; top: 1017px;">
+        <div id="content">
+            <div id="menu3">
+                <a href="agendevisita" class="agende"><img src="~/Content/Images/agenda.png" alt="agenda.png" onmouseover="opacgo(this)" onmouseout="opacback(this)"></a><div class="bar" style="position:absolute; top:7px; left:130px;"></div>
+                <a href="transporteescolar" class="trans"><img src="~/Content/Images/transporte.png" alt="transporte.png" onmouseover="opacgo(this)" onmouseout="opacback(this)"></a><div class="bar" style="position:absolute; top:7px; left:270px;"></div>
+                <a href="textosinteressantes" class="textos"><img src="~/Content/Images/textos.png" alt="textos.png" onmouseover="opacgo(this)" onmouseout="opacback(this)"></a><div class="bar" style="position:absolute; top:7px; left:440px;"></div>
+                <a href="localizacao" class="chegar"><img src="~/Content/Images/chegar.png" alt="chegar.png" onmouseover="opacgo(this)" onmouseout="opacback(this)"></a>
+            </div>
+
+            <div id="end" class="txt1" style="color:#FFF;">
+                Endereço:  Av. Senador Pinheiro Machado, 994 - Santos/SP<br>
+                Secretaria:  Tel: (013) 3225-6865 e Tel/Fax: (013) 3225-4519<br>
+                Educação Infantil:  (013) 9799-8700
+            </div>
+
+            <!--<a href="pedagogiawaldorf" class="pedag"><img src="~/Content/Images/pedagogia.png" alt="pedagogia.png" onmouseover="opacgo(this)" onmouseout="opacback(this)" /></a>
+            <a href="https://www.facebook.com/pages/Escola-Regina-Altman/138098182934826?fref=ts" target="new" class="face"><img src="~/Content/Images/face.jpg" alt="face.jpg" onmouseover="opacgo(this)" onmouseout="opacback(this)" /></a>-->
+
+            <div id="diret" class="txt1" style="color:#FFF;">
+                <b>Direção Geral</b><p>
+
+                    Eliana Castaldi T. Haddad<br>
+                    Psicóloga, Pedagoga,<br>
+                    Pós-Graduada em Gestão Empresarial
+                </p><p>
+
+                    Martha Rosa Farid<br>
+                    Psicóloga e Contabilista
+                </p><p>
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function getheight() {
+                var d = document.documentElement;
+                var b = document.body;
+                var who = d.offsetHeight ? d : b;
+                return Math.max(who.scrollHeight, who.offsetHeight);
+            }
+            setTimeout(function () { document.getElementById("rodape").style.display = 'block'; $("#rodape").css("top", $('#meio').height() + 500) }, 3000);
+
+            //document.getElementById('rodape').style.marginTop = '1000px';
+
+        </script>
+    </div>
+
+
+
+</body>
+</html>

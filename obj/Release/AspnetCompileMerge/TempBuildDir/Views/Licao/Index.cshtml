@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ERAWeb.Models.LicaoModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nova Lição", "Create", null, new { @class = "btn btn-info" })
+</p>
+<table class="h2" style="width:820px;">
+    <tr class="h3" style="background-color:#e0e0e0; height:40px;">
+        <th align="center">
+            @Html.DisplayNameFor(model => model.DataLicao)
+        </th>
+        <th align="center">
+            @Html.DisplayNameFor(model => model.Turma.Display)
+        </th>
+        <th align="center">
+            @Html.DisplayNameFor(model => model.Disciplina.Descricao)
+        </th>
+        <th width="61"></th>
+        <th width="79"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="h4" style="background-color:#f6f6f6; height:40px; border:1px solid #FFF;">
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.DataLicaoFormatada)
+            </td>
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.Turma.Display)
+            </td>
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.Disciplina.Descricao)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-info" })
+            </td>
+            <td>
+                <input type="button" value="Excluir" onclick="deleteClick(@item.Id);" class="btn btn-danger" />
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/caioketo")
+}

@@ -1,0 +1,97 @@
+/* TIPOS DE MENU */
+
+#noticias{
+		position:relative; 
+		margin-top:20px; 
+}
+
+/* TIPOS DAS NOTÍCIAS */
+
+#inserir{
+		position:relative;
+		background-image: url(../imgs/inserir.png);
+		background-position: 165px 5px;
+		background-repeat:no-repeat;		
+}
+#gerenciar{
+		position:relative;
+		background-image: url(../imgs/zoom.png);
+		background-position: 165px 5px;
+		background-repeat:no-repeat;			
+}
+#subcategoria{
+		position:relative;
+		background-image: url(../imgs/sair.png);
+		background-position: 165px 5px;
+		background-repeat:no-repeat;		
+}
+
+.noticia { 
+		background-color:#18a2bf; 
+		background-image: url(../imgs/noticias.png);
+		background-position: 155px 10px;
+		background-repeat:no-repeat;
+}
+.noticia li { 
+		padding: 15px;
+		list-style-type: none;
+}
+.noticialist { 
+		background-color:#35c4e2; 
+}
+.noticialist:hover { 
+		background-color:#18a2bf; 
+}
+
+
+.noticialistx { 
+		background-color:#47dc66; 
+}
+.noticialistx:hover { 
+		background-color:#2dac48; 
+}
+
+.noticialistx li { 
+		padding: 7px;
+		padding-left:15px;
+		list-style-image: url(../imgs/seta.png); 
+}
+
+.noticialist li { 
+		padding: 7px;
+		padding-left:15px;
+		list-style-image: url(../imgs/seta.png); 
+}
+.m1{
+		width:100%; 
+		height:50px; 
+		margin-top:2px; 
+		cursor:pointer;	
+		font-size:18px; 
+		font-family: "CenturyGothicBold", arial; 
+		color:#FFF; 
+}
+.m2{
+		width:100%; 
+		height:30px;
+		margin-top:1px; 
+		cursor:pointer;
+		font-size:13px; 
+		font-family: "CenturyGothic", arial; 
+		color:#FFF; 		
+}
+
+
+/* CONTEUDO NOTICIAS */
+
+.h1{font-size:29px; font-family: "CenturyGothic", arial; color:#FFF;}
+.h2{font-size:24px; font-family: "CenturyGothic", arial; color:#999;}
+#todo{position:relative; padding:10px;}
+#noticiasx{position:relative; background-color:#e5e5e5; padding:10px; width:800px; height:20px; }
+
+.input1{width:800px;}
+.input2{width:691px;}
+
+/* GERENCIAR NOTICIAS */
+.h3{font-size:16px; font-family: "CenturyGothic", arial; color:#000;}
+.h4{font-size:16px; font-family: "CenturyGothic", arial; color:#999;}

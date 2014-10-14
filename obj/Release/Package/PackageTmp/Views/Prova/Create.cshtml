@@ -1,0 +1,83 @@
+﻿@model ERAWeb.Models.ProvaModel
+
+@{
+    ViewBag.Title = "Prova";
+}
+
+<h2>Prova</h2>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.DataProva)</b>
+            </span>
+            @Html.TextBoxFor(model => model.DataProva, new { @class = "form-control datepicker", placeholder = "Selecione a data..." })
+            @Html.ValidationMessageFor(model => model.DataProva)
+        </p>
+
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.TurmaId)</b>
+            </span>
+            @Html.DropDownList("TurmaId", null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.TurmaId)
+        </p>
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.DisciplinaId)</b>
+            </span>
+            @Html.DropDownList("DisciplinaId", null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.DisciplinaId)
+        </p>
+        <p>
+            <label class="h2">
+                <b>@Html.DisplayNameFor(model => model.Trimestre)</b>
+            </label>
+            @Html.DropDownList("Trimestre", null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Trimestre)
+        </p>
+        <p>
+            <label class="h2">
+                <b>@Html.DisplayNameFor(model => model.Recuperacao)</b>
+            </label>
+            @Html.EditorFor(model => model.Recuperacao, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Recuperacao)
+        </p>
+
+        <p>
+            <label class="h2">
+                <b>@Html.DisplayNameFor(model => model.Descricao)</b>
+            </label>
+            @Html.TextAreaFor(model => model.Descricao, new { @class = "form-control", @style = "height:300px; width:800px;" })
+            @Html.ValidationMessageFor(model => model.Descricao)
+        </p>
+
+        <p>
+            <input type="submit" value="Cadastrar" class="btn btn-info" style="width:100%;" />
+        </p>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-info" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(function () { // will trigger when the document is ready
+            $('.datepicker').datepicker(); //Initialise any date pickers
+        });
+    </script>
+}

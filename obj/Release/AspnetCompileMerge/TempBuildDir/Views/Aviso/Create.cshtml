@@ -1,0 +1,173 @@
+﻿@model ERAWeb.Models.AvisoModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>AvisoModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.Aviso)</b>
+            </span>
+            @Html.TextAreaFor(model => model.Aviso, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Aviso)
+        </p>
+
+        <p>
+            <span class="h2">
+                <b>Arquivos</b>
+            </span>
+            @Html.DropDownList("Arquivos", null, new { @class = "form-control" })
+            <input type="button" value="+" onclick="addArquivo();" />
+        </p>
+        <table id="arquivos" class="display" style="width: 25%; float:left">
+            <thead>
+                <tr>
+                    <th>ArquivoId</th>
+                    <th>Arquivo</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br />
+        <br />
+        <br />
+
+        <p>
+            <span class="h2">
+                <b>Turmas</b>
+            </span>
+            @Html.DropDownList("Turmas", null, new { @class = "form-control" })
+            <input type="button" value="+" onclick="addTurma();" />
+        </p>
+        <table id="turmas" class="display" style="width: 25%; float:left">
+            <thead>
+                <tr>
+                    <th>TurmaId</th>
+                    <th>Turma</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>    
+        <br />
+
+        <p>
+            <input id="formButton" type="button" value="Cadastrar" class="btn btn-info" style="width:100%;" />
+        </p>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-info" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryTable")
+
+<script type="text/javascript">
+    var tblArquivos;
+    var tblTurmas;
+    $(function () {
+        tblArquivos = $('#arquivos').dataTable({
+            paging: false,
+            searching: false,
+            ordering: false,
+            info: false,
+            language: {
+                infoEmpty: "Adicione os arquivos"
+            }
+        }).api();
+        tblTurmas = $('#turmas').dataTable({
+            paging: false,
+            searching: false,
+            ordering: false,
+            info: false,
+            language: {
+                infoEmpty: "Adicione as turmas"
+            }
+        }).api();
+    });
+
+    function addArquivo() {
+        var arquivoDisplay = $("#Arquivos option:selected").text();
+        var arquivoId = $("#Arquivos option:selected").val();
+        var data = tblArquivos.rows().data();
+        for (var i = 0; i < data.length; i++) {
+            if (arquivoId == data[i][0]) {
+                return;
+            }
+
+        }
+        tblArquivos.row.add([arquivoId, arquivoDisplay]).draw();
+    }
+
+    function addTurma() {
+        var turmaDisplay = $("#Turmas option:selected").text();
+        var turmaId = $("#Turmas option:selected").val();
+        var data = tblTurmas.rows().data();
+        for (var i = 0; i < data.length; i++) {
+            if (turmaId == data[i][0]) {
+                return;
+            }
+
+        }
+        tblTurmas.row.add([turmaId, turmaDisplay]).draw();
+    }
+
+    function getProp(form, name) {
+        for (var i = 0; i < form.length; i++) {
+            if (form[i].name == name) {
+                return form[i].value;
+            }
+        }
+        return null;
+    }
+
+    function mapModel() {
+        var aviso = $("form").serializeArray();
+        var avisoModel = {
+            Aviso: '',
+            ArquivosId: [],
+            TurmasId: []
+        };
+
+        avisoModel.Aviso = getProp(aviso, 'Aviso');
+        var data = tblArquivos.rows().data();
+        var i;
+        for (i = 0; i < data.length; i++) {
+            avisoModel.ArquivosId.push(data[i][0]);
+        }
+        data = tblTurmas.rows().data();
+        for (i = 0; i < data.length; i++) {
+            avisoModel.TurmasId.push(data[i][0]);
+        }
+
+        return avisoModel;
+    }
+
+    $("#formButton").click(function () {
+        $.ajax({
+            url: "@Url.Action("Create", "Aviso")",
+            type: "POST",
+            data: {
+                avisoJSON: JSON.stringify(mapModel())
+            },
+            success: function () {
+                window.location.replace("@Url.Action("Index", "Aviso")");
+            }
+        });
+    });
+</script>
+}

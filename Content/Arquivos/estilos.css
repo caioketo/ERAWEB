@@ -1,0 +1,119 @@
+* { margin: 0; padding: 0; }
+body { margin:0px; background-image:url(http://www.escolareginaaltman.com.br/imgs/fundo.jpg); background-repeat:repeat-y; background-position:top; }
+img { border:0px; }
+
+a:link {color: #666;text-decoration: none;}
+a:visited {text-decoration: none;color: #666;}
+a:hover {text-decoration: none;color: #666;}
+a:active {text-decoration: none;color: #666;}
+
+a.x1:link {color: #666;text-decoration: none;}
+a.x1:visited {text-decoration: none;color: #666;}
+a.x1:hover {text-decoration: none;color: #333;}
+a.x1:active {text-decoration: none;color: #666;}
+
+a.x2:link {color: #319bf2;text-decoration: none;}
+a.x2:visited {text-decoration: none;color: #319bf2;}
+a.x2:hover {text-decoration: none;color: #319bf2;}
+a.x2:active {text-decoration: none;color: #319bf2;}
+
+#fundo{ position:absolute; top:0px; background-image:url(http://www.escolareginaaltman.com.br/imgs/topo.jpg); background-position:top; width:100%; height:100%; background-repeat:no-repeat; }
+
+#conteudo{	position: absolute; top: 0px; width: 1000px; left: 50%; margin-left: -500px; }
+	#menu{ position:absolute; background-image:url(http://www.escolareginaaltman.com.br/imgs/menu.png); width:516px; height:38px; left:480px; top:25px; background-repeat:no-repeat; }
+	@font-face {
+    font-family: "hobon";
+    src: url('../fonts/myriad-web-pro.ttf'), url('../fonts/myriad-web-pro.eot') ;
+}
+	.menux{ font-family:'hobon'; font-size:12px; color:#666; }
+	#menuz{ position:absolute; top:0px; left:0px; height:34px; background-color:#ccbc1a; border-collapse:collapse; -moz-border-radius: 20px;
+-webkit-border-radius: 20px; -khtml-border-radius: 20px; border-radius: 20px; width:65px; border:#FFF solid 2px;}
+	
+	.barra{ background-color:#cacfcc; width:220px; height:1px; }
+	#menu2{ position:absolute; top:420px; left:0px; width:220px; text-align:right; font-family:'hobon'; color:#666; font-size:14px; }
+	.menux2{ font-family:'hobon'; font-size:17px; width:160px; height:27px; margin-left:50px; color:#FFF; padding-top:10px; padding-right:10px; }
+	
+	
+	#meio{position:relative; margin-top:420px; margin-left:240px; width:800px; height:100%;  }
+	#rodape{ position:relative;  margin-left:0px; background-image:url(http://www.escolareginaaltman.com.br/imgs/rodape.jpg); background-repeat:repeat-x; height:220px; width:100%; top:1000px; display:none;}
+	
+
+	#content{	position: absolute; top: 0px; width: 1000px; left: 50%; margin-left: -500px; }
+		#menu3{ position:absolute; top:-10px; left:50px; width:558px; height:48px; border-collapse:collapse; -moz-border-radius: 20px;
+-webkit-border-radius: 20px; -khtml-border-radius: 20px; border-radius: 20px; background-color:#698d19;}
+		.bar{ background-color:#FFF; width:1px; height:35px;}
+		
+		.agende{ position:absolute; top:5px; left:15px; }
+		.trans{ position:absolute; top:4px; left:140px; }
+		.textos{ position:absolute; top:4px; left:280px; }
+		.chegar{ position:absolute; top:4px; left:450px; }
+		
+		#end{position: absolute;left: 57px; top: 60px;}
+		.txt1{ font-family:'hobon'; color:#FFF; font-size:14px; }
+		
+		.pedag{position: absolute;left: 55px;top: 108px;}
+		.face{position: absolute;left: 195px;top: 123px;}
+		
+		#diret{
+	position: absolute;
+	left: 713px;
+	top: 22px;
+	width: 273px;
+	text-align: right;
+	height: 145px;
+}
+
+@font-face {
+    font-family: "hobon";
+    src: url('../fonts/myriad-web-pro.ttf'), url('../fonts/myriad-web-pro.eot') ;
+}
+@font-face {
+    font-family: "neosans";
+    src: url("../fonts/neo-sans-bold.ttf"), url("../fonts/neo-sans-bold.eot") ;
+}
+
+/* INICIO */
+#inicio{
+	position: absolute;
+	text-align: right;
+	width: 740px;
+	top: 244px;
+}
+.txt1{ font-family:'hobon'; color:#666; font-size:14px; }
+#frutas{
+	position: absolute;
+	background-image: url(http://www.escolareginaaltman.com.br/imgs/frutas.png);
+	width: 732px;
+	height: 173px;
+	top: 349px;
+}
+
+.h1{font-size:29px; font-family: "neosans", arial; color:#319bf2;}
+.h2{font-size:24px; font-family: "neosans", arial; color:#999;}
+.h2:hover{ color:#666; }
+
+/* ESCOLA */
+#escola{position:relative;  width: 740px;}
+.title1{ font-family: "neosans"; font-size:25px;}
+.title2{ font-family: "neosans"; font-size:20px;}
+
+.example-image-link {
+  display: inline-block;
+  margin: 0 10px 20px 10px;
+  line-height: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 4px solid #5e5e5e;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+/* line 191, ../sass/screen.sass */
+.example-image-link:hover {
+  border: 4px solid #86b22a;
+}
+

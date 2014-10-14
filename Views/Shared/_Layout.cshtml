@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Escola Regina Altman - Educação Infantil e Ensino Fundamental</title>
+    <!-- Bootstrap -->
+    <link href="~/Content/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="~/Content/bootstrap.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- start plugins -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <!-- start slider -->
+    <link href="~/Content/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Scripts/modernizr.custom.28468.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.cslider.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55638744-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <script type="text/javascript">
+			$(function() {
+
+				$('#da-slider').cslider({
+					autoplay : true,
+					bgincrement : 450
+				});
+
+			});
+    </script>
+    <!-- Owl Carousel Assets -->
+    <link href="~/Content/owl.carousel.css" rel="stylesheet">
+    <script src="~/Scripts/owl.carousel.js"></script>
+    <script>
+			$(document).ready(function() {
+
+				$("#owl-demo").owlCarousel({
+					items : 4,
+					lazyLoad : true,
+					autoPlay : true,
+					navigation : true,
+					navigationText : ["", ""],
+					rewindNav : false,
+					scrollPerPage : false,
+					pagination : false,
+					paginationNumbers : false,
+				});
+
+			});
+    </script>
+    <!-- //Owl Carousel Assets -->
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="~/Content/Fonts/css/font-awesome.min.css">
+    <!----font-Awesome----->
+</head>
+<body>
+    <div class="header_bg1">
+        <div class="container">
+
+            <div class="row h_menu">
+                <nav class="navbar navbar-default navbar-left" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="@Url.Action("Index", "Home")">Início</a></li>
+                            <li class="subMenuC">
+                                <a>Ensinos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("EducInfantil", "Home")">Educação Infantil</a></li>
+                                    <li><a href="@Url.Action("EducFundamental", "Home")">Ensino Fundamental</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>Agenda</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("SelecioneTurma", "Agenda", new { next = "Avisos" })">Avisos Importantes</a></li>
+                                    <li><a href="@Url.Action("SelecioneTurma", "Agenda", new { next = "Licoes" })">Calendário de Lições</a></li>
+                                    <li><a href="@Url.Action("SelecioneTurma", "Agenda", new { next = "Provas" })">Calendário de Provas</a></li>
+                                    <li><a href="@Url.Action("SelecioneTurma", "Agenda", new { next = "Eventos" })">Eventos</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Escola")">A Escola</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("Equipe", "Escola")">Nossa Equipe</a></li>
+                                    <li><a href="@Url.Action("Ambientes", "Escola")">Ambientes</a></li>
+                                    <li><a href="@Url.Action("Galeria", "Escola")">Galeria</a></li>
+                                    <li><a href="@Url.Action("Visita", "Escola")">Agende uma Visita</a></li>
+                                    <li><a href="@Url.Action("Local", "Escola")">Localização</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="@Url.Action("Textos", "Home")">Textos Interessantes</a></li>
+                            <li><a href="@Url.Action("Contato", "Escola")">Contato</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                    <!-- start soc_icons -->
+                </nav>
+                
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+        <div class="container body-content">
+            @RenderBody()
+            <br />
+            <br />
+            <br />
+            <br />  
+        </div>
+        <script type="text/javascript" src="~/Scripts/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery.fancybox.js?v=2.1.5"></script>
+        <link rel="stylesheet" type="text/css" href="~/Content/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <!-- Add Button helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="~/Content/jquery.fancybox-buttons.css?v=1.0.5" />
+        <script type="text/javascript" src="~/Scripts/jquery.fancybox-buttons.js?v=1.0.5"></script>
+        <!-- Add Thumbnail helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="~/Content/jquery.fancybox-thumbs.css?v=1.0.7" />
+        <script type="text/javascript" src="~/Scripts/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+        <!-- Add Media helper (this is optional) -->
+        <script type="text/javascript" src="~/Scripts/jquery.fancybox-media.js?v=1.0.6"></script>
+        @RenderSection("scripts", required: false)
+        <script type="text/javascript" src="~/Scripts/layout.js"></script>
+    <div class="rodape">
+        <div class="info">
+            <span>Endereço:  Av. Senador Pinheiro Machado, 994 - Santos/SP</span>
+            <br />
+            <span>Secretaria:  Tel: (013) 3225-6865 e Tel/Fax: (013) 3225-4519</span>
+            <br />
+            <span>Educação Infantil:  (013) 99799-8700</span>
+        </div>
+        <div class="dir">
+            <b>Direção Geral</b>
+            <br />
+            <span>Eliana Castaldi T. Haddad</span>
+            <br />
+            <span>Psicóloga, Pedagoga,</span>
+            <br />
+            <span>Pós-Graduada em Gestão Empresarial</span>
+            <br />
+            <span>Martha Rosa Farid</span>
+            <br />
+            <span>Psicóloga e Contabilista</span>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="sitepor">
+            Site por Escola Regina Altman. Todos direitos reservados.
+        </div>
+    </div>
+</body>
+</html>

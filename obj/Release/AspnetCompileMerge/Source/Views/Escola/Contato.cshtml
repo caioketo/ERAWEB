@@ -1,0 +1,23 @@
+﻿@model ERAWeb.Models.MailModel
+@{
+    ViewBag.Title = "Contato";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 class="titulo">Contato</h1>
+<fieldset>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p class="textoCentral" style="font-weight: bold">Nome: </p>
+        <p>@Html.TextBoxFor(m => m.Nome, new { @class = "textBoxERA" })</p>
+    <p class="textoCentral" style="font-weight: bold">Telefone: </p>
+        <p>@Html.TextBoxFor(m => m.Telefone, new { @class = "textBoxERA" })</p>
+    <p class="textoCentral" style="font-weight: bold">E-mail: </p>
+        <p>@Html.TextBoxFor(m => m.Email, new { @class = "textBoxERA" })</p>
+    <p class="textoCentral" style="font-weight: bold">Assunto: </p>
+        <p>@Html.TextBoxFor(m => m.Assunto, new { @class = "textBoxERA" })</p>
+    <p class="textoCentral" style="font-weight: bold">Mensagem: </p>
+        <p>@Html.TextAreaFor(m => m.Mensagem, new { @class = "textBoxERA", @style = "width: 1137px; height: 217px" })</p>
+    <input type="submit" value="Enviar mensagem" class="button_Confirmacao" />
+    }
+</fieldset>

@@ -1,0 +1,172 @@
+﻿@model ERAWeb.Models.EventoModel
+
+@{
+    ViewBag.Title = "Evento";
+}
+
+@Styles.Render("~/Content/timepickerCSS")
+@Styles.Render("~/Content/datatableCSS")
+
+
+<h2>Evento</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div id="form1" class="form-horizontal">
+        @Html.ValidationSummary(true)
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.Titulo)</b>
+            </span>
+            @Html.EditorFor(model => model.Titulo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Titulo)
+        </p>
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.DataEvento)</b>
+            </span>
+            @Html.TextBoxFor(model => model.DataEvento, new { @class = "form-control datepicker", placeholder = "Selecione a data..." })
+            @Html.ValidationMessageFor(model => model.DataEvento)
+        </p>
+
+        <p>
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.Inicio)</b>
+            </span>
+            <input class="form-control timepicker ui-timepicker-input" id="Inicio" name="Inicio" placeholder="Selecione a data..." type="text" value="" autocomplete="off">
+
+            <span class="h2">
+                <b>@Html.DisplayNameFor(model => model.Fim)</b>
+            </span>
+            <input class="form-control timepicker ui-timepicker-input" id="Fim" name="Fim" placeholder="Selecione a data..." type="text" value="" autocomplete="off">
+        </p>
+
+
+        <p>
+            <span class="h2">
+                <b>Turmas</b>
+            </span>
+            @Html.DropDownList("Turmas", null, new { @class = "form-control" })
+            <input type="button" value="+" onclick="addTurma();" />
+        </p>
+        <table id="turmas" class="display" style="width: 25%; float:left">
+            <thead>
+                <tr>
+                    <th>TurmaId</th>
+                    <th>Turma</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br />
+
+
+        <p>
+            <label class="h2">
+                <b>@Html.DisplayNameFor(model => model.Conteudo)</b>
+            </label>
+            @Html.TextAreaFor(model => model.Conteudo, new { @class = "form-control", @style = "height:300px; width:800px;" })
+            @Html.ValidationMessageFor(model => model.Conteudo)
+        </p>
+
+        
+
+        <p>
+            <input id="formButton" type="button" value="Cadastrar" class="btn btn-info" style="width:100%;" />
+        </p>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-info" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryTimePicker")
+    @Scripts.Render("~/bundles/jqueryTable")
+    
+
+    <script type="text/javascript">
+    var turmasTable;
+    $(function () {
+        $('.datepicker').datepicker();
+        $('.timepicker').timepicker({
+            'forceRoundTime': true,
+            'scrollDefaultNow': true,
+            'timeFormat': 'H:i'
+        });
+        turmasTable = $('#turmas').dataTable({
+            paging: false,
+            searching: false,
+            ordering: false,
+            info: false,
+            language: {
+                infoEmpty: "Adicione as turmas"
+            }
+        }).api();
+    });
+    function addTurma() {
+        var turmaDisplay = $("#Turmas option:selected").text();
+        var turmaId = $("#Turmas option:selected").val();
+        var data = turmasTable.rows().data();
+        for (var i = 0; i < data.length; i++) {
+            if (turmaId == data[i][0]) {
+                return;
+            }
+
+        }
+        turmasTable.row.add([turmaId, turmaDisplay]).draw();
+    };
+
+    function getProp(form, name) {
+        for (var i = 0; i < form.length; i++) {
+            if (form[i].name == name) {
+                return form[i].value;
+            }
+        }
+        return null;
+    }
+
+    function mapModel() {
+        var evento = $("form").serializeArray();
+        var eventoModel = {
+            Titulo: '',
+            DataEvento: new Date(),
+            Inicio: new Date(),
+            Fim: new Date(),
+            TurmasId: [],
+            Conteudo: ''
+        };
+
+        eventoModel.Titulo = getProp(evento, 'Titulo');
+        eventoModel.Conteudo = getProp(evento, 'Conteudo');
+        eventoModel.DataEvento = getProp(evento, 'DataEvento');
+        eventoModel.Inicio = getProp(evento, 'Inicio');
+        eventoModel.Fim = getProp(evento, 'Fim');
+        var data = turmasTable.rows().data();
+        for (var i = 0; i < data.length; i++) {
+            eventoModel.TurmasId.push(data[i][0]);
+        }
+
+        return eventoModel;
+    }
+
+    $("#formButton").click(function () {
+        $.ajax({
+            url: "@Url.Action("Create", "Evento")",
+            type: "POST",
+            data: {
+                eventoJSON: JSON.stringify(mapModel())
+            },
+            success: function () {
+                window.location.replace("@Url.Action("Index", "Evento")");
+            }
+        });
+    });
+    </script>
+}

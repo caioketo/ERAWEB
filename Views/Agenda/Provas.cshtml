@@ -1,0 +1,167 @@
+﻿@model ERAWeb.Models.ProvaListModel
+
+@{
+    ViewBag.Title = "Provas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="titulo">Provas</h1>
+<h2 class="subTitulo">@Model.TurmaDescricao</h2>
+<table style="width: 100%;">
+    <tr>
+        <td class="clickableRow borderRow" id="1">1º Trimestre</td>
+        <td class="clickableRow borderRow" id="2">2º Trimestre</td>
+        <td class="clickableRow borderRow" id="3">3º Trimestre</td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+
+<table id="provas" class="table">
+    <tr>
+        <th class="provasHeader dataHeader">
+            Data
+        </th>
+        <th class="provasHeader materiaHeader">
+            Disciplina
+        </th>
+        <th class="provasHeader Descricao">
+            Descrição
+        </th>
+    </tr>
+@foreach (var item in Model.Provas)
+{
+    <tr class="provaRow">
+        <td class="centerCol">
+            @Html.DisplayFor(modelItem => item.DataProvaFormatada)
+        </td>
+        <td class="centerCol">
+            @Html.DisplayFor(modelItem => item.Disciplina.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+    </tr>
+}
+
+</table>
+
+<br />
+<br />
+<h2 class="titulo">Recuperação</h2>
+<br />
+<table id="provasRec" class="table">
+    <tr>
+        <th class="provasHeader dataHeader">
+            Data
+        </th>
+        <th class="provasHeader materiaHeader">
+            Matéria
+        </th>
+        <th class="provasHeader Descricao">
+            Descrição
+        </th>
+    </tr>
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryTable")
+}
+
+<script>
+    var tblProvas;
+    var turmaId = @Model.TurmaId;
+    $(function () {
+        var trimID = 1;
+        var mes = new Date().getMonth() + 1;
+        if (mes <= 4) {
+            trimID = 1;
+        }
+        else if (mes <= 8) {
+            trimID = 2;
+        }
+        else {
+            trimID = 3;
+        }
+        
+        $.ajax({
+                url: "@Url.Action("ProvasTrim", "Agenda")",
+                type: "GET",
+            data: {
+                id: turmaId,
+                trimestre : trimID
+            },
+            success: function (e) {
+                $("#provas tr td").parents("tr").remove();
+                var provasObj = JSON.parse(e);
+                for (var i = 0; i < provasObj.length; i++) {
+                    var rowInfo = provasObj[i];
+                    var row_data = "";
+                    row_data += '<tr class="provaRow"> <td class="centerCol provaRow">' + rowInfo.DataProva + '</td><td class="centerCol provaRow">' + rowInfo.Disciplina + '</td><td class="provaRow">' + rowInfo.Descricao + '</td></tr>';
+                    $("#provas").append(row_data);
+                }
+            }
+        });
+
+        $.ajax({
+            url: "@Url.Action("ProvasRecTrim", "Agenda")",
+            type: "GET",
+        data: {
+            id: turmaId,
+            trimestre : trimID
+        },
+        success: function (e) {
+            $("#provasRec tr td").parents("tr").remove();
+            var provasObj = JSON.parse(e);
+            for (var i = 0; i < provasObj.length; i++) {
+                var rowInfo = provasObj[i];
+                var row_data = "";
+                row_data += '<tr class="provaRow"> <td class="centerCol provaRow">' + rowInfo.DataProva + '</td><td class="centerCol provaRow">' + rowInfo.Disciplina + '</td><td class="provaRow">' + rowInfo.Descricao + '</td></tr>';
+                $("#provasRec").append(row_data);
+            }
+        }
+        });
+        $(".borderRow").click(function () {
+            trimID = $(this).attr('id');
+            $.ajax({
+                url: "@Url.Action("ProvasTrim", "Agenda")",
+                type: "GET",
+                data: {
+                    id: turmaId,
+                    trimestre : trimID
+                },
+                success: function (e) {
+                    $("#provas tr td").parents("tr").remove();
+                    var provasObj = JSON.parse(e);
+                    for (var i = 0; i < provasObj.length; i++) {
+                        var rowInfo = provasObj[i];
+                        var row_data = "";
+                        row_data += '<tr class="provaRow"> <td class="centerCol provaRow">' + rowInfo.DataProva + '</td><td class="centerCol provaRow">' + rowInfo.Disciplina + '</td><td class="provaRow">' + rowInfo.Descricao + '</td></tr>';
+                        $("#provas").append(row_data);
+                    }
+                }
+            });
+
+            $.ajax({
+                url: "@Url.Action("ProvasRecTrim", "Agenda")",
+                type: "GET",
+                data: {
+                    id: turmaId,
+                    trimestre : trimID
+                },
+                success: function (e) {
+                    $("#provasRec tr td").parents("tr").remove();
+                    var provasObj = JSON.parse(e);
+                    for (var i = 0; i < provasObj.length; i++) {
+                        var rowInfo = provasObj[i];
+                        var row_data = "";
+                        row_data += '<tr class="provaRow"> <td class="centerCol provaRow">' + rowInfo.DataProva + '</td><td class="centerCol provaRow">' + rowInfo.Disciplina + '</td><td class="provaRow">' + rowInfo.Descricao + '</td></tr>';
+                        $("#provasRec").append(row_data);
+                    }
+                }
+            });
+        });
+    });
+</script>

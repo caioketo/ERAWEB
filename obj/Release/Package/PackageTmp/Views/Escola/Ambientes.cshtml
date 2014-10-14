@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Ambientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="titulo">Ambientes</h1>
+
+<br />
+<br />
+<div class="imagensPai">
+    <div class="imagens">
+        <a class="fancybox" href="~/Content/Images/80.jpg" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Images/80.jpg" alt="" /></a>
+        <a class="fancybox" href="~/Content/Images/81.jpg" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Images/81.jpg" alt="" /></a>
+        <a class="fancybox" href="~/Content/Images/78.jpg" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Images/78.jpg" alt="" /></a>
+        <a class="fancybox" href="~/Content/Images/4.jpg" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Images/4.jpg" alt="" /></a>
+        <a class="fancybox" href="~/Content/Images/8.jpg" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Images/8.jpg" alt="" /></a>
+        <a class="fancybox" href="~/Content/Images/15.jpg" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Images/15.jpg" alt="" /></a>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<span class="textoCentral">Veja o vídeo abaixo e conheça um pouco da nossa escola:</span>
+<br />
+<br />
+<div class="imagensPai">
+    <div class="imagens">
+        <iframe width="680" height="400" src="//www.youtube.com/embed/n7bp2CIyrJE" frameborder="0"></iframe>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            *  Simple image gallery. Uses default settings
+            */
+
+        $('.fancybox').fancybox();
+
+    });
+</script>
