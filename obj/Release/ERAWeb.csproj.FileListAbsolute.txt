@@ -53,3 +53,5 @@ C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\bin\Microsoft.Owin.Security.MicrosoftAccount
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.csprojResolveAssemblyReference.cache
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.dll
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.pdb
+C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.Migrations.InitialMigrations.resources
+C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.csproj.GenerateResource.Cache

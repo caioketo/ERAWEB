@@ -108,5 +108,6 @@ C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\bin\Microsoft.Owin.Security.MicrosoftAccount
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Debug\ERAWeb.dll
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Debug\ERAWeb.pdb
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Debug\ERAWeb.csprojResolveAssemblyReference.cache
-C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Debug\ERAWeb.Migrations.Initial.resources
+C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Debug\ERAWeb.Migrations.InitialMigrations.resources
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Debug\ERAWeb.csproj.GenerateResource.Cache
+C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Debug\ERAWeb.Migrations._2.resources
