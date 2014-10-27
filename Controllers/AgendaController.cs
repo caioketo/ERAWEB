@@ -51,6 +51,20 @@ namespace ERAWeb.Controllers
             {
                 avisoList.TurmaDescricao = turma.Descricao;
             }
+            avisoList.Fotos = new List<bool>();
+            for (int i = 0; i < avisoList.Avisos.Count(); i++)
+            {
+                AvisoModel aviso = avisoList.Avisos[i];
+                avisoList.Fotos.Add(false);
+                foreach (ArquivoModel arq in aviso.Arquivos)
+                {
+                    if (arq.Arquivo.ToUpper().Contains(".JPG"))
+                    {
+                        avisoList.Avisos.Remove(aviso);
+                        break;
+                    }
+                }
+            }
             return View(avisoList);
         }
 

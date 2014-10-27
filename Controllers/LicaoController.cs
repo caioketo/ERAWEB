@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -77,8 +77,6 @@ namespace ERAWeb.Controllers
             licaomodel = JsonConvert.DeserializeObject<LicaoModel>(licaoJSON);
             licaomodel.DataAlteracao = DateTime.Now;
             licaomodel.DataCriacao = DateTime.Now;
-            DisciplinaModel dis = ERAContext.Context.DisciplinaModels.Find(licaomodel.DisciplinaId);
-
 
             db.Licoes.Add(licaomodel);
             db.SaveChanges();

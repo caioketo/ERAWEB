@@ -162,6 +162,7 @@
     <Compile Include="Controllers\AgendaController.cs" />
     <Compile Include="Controllers\ArquivoController.cs" />
     <Compile Include="Controllers\AvisoController.cs" />
+    <Compile Include="Controllers\BoletimController.cs" />
     <Compile Include="Controllers\CPAController.cs" />
     <Compile Include="Controllers\EscolaController.cs" />
     <Compile Include="Controllers\EventoController.cs" />
@@ -224,6 +225,7 @@
     <Content Include="Content\fancybox_sprite%402x.png" />
     <Content Include="Content\fancybox_sprite.png" />
     <Content Include="Content\favicon.ico" />
+    <Content Include="Content\generic.css" />
     <Content Include="Content\Images\100.jpg" />
     <Content Include="Content\Images\109.jpg" />
     <Content Include="Content\Images\11x.jpg" />
@@ -283,6 +285,8 @@
     <Content Include="Content\jquery.fancybox-thumbs.css" />
     <Content Include="Content\jquery.fancybox.css" />
     <Content Include="Content\jquery.timepicker.css" />
+    <Content Include="Content\js-image-slider.css" />
+    <Content Include="Content\js-image-slider.js" />
     <Content Include="Content\logo.jpg" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\menu.css" />
@@ -291,6 +295,7 @@
     <Content Include="Content\slider.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\Images\topo.jpg" />
+    <Content Include="Content\thumbnail-slider.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -404,6 +409,8 @@
     <Content Include="Views\Agenda\Avisos.cshtml" />
     <Content Include="Views\Agenda\Provas.cshtml" />
     <Content Include="Views\Agenda\Licoes.cshtml" />
+    <Content Include="Views\Boletim\Boletim.cshtml" />
+    <Content Include="Views\Shared\_AvisosFotos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,17 +1,32 @@
-﻿
+﻿@model ERAWeb.Models.AvisoListModel
+
 @{
     ViewBag.Title = "Galeria";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<table class="tableAvisos">
+    @for (var i = 0; i < Model.Avisos.Count(); i++)
+    {
+        ERAWeb.Models.AvisoModel item = Model.Avisos[i];
+        <tr>
+            <td>
+                <span class="avisos">
+                    <h1 class="titulo">@Html.Raw(item.Aviso)</h1>
+                </span>
+                <div class="imagensPai">
+                    <div class="imagens">
+                        @foreach (var arquivo in item.Arquivos)
+                        {
+                            <a class="fancybox" href="~/Content/Arquivos/@arquivo.Arquivo" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Arquivos/@arquivo.Arquivo" alt="" /></a>
+                        }
+                    </div>
+                </div>
+            </td>
 
-<h1 class="titulo">Galeria de Fotos</h1>
+        </tr>
+        <tr class="space"></tr>
+    }
 
-<br />
-<span class="textoCentral">Ainda não existe imagens cadastradas</span>
-<br />
-<br />
-<br />
-<br />
-<br />
+</table>
 <br />
 <br />

@@ -11,6 +11,7 @@ namespace ERAWeb.Controllers
 {
     public class EscolaController : Controller
     {
+        private ERAContext context = new ERAContext();
         // GET: Escola
         public ActionResult Index()
         {
@@ -29,7 +30,27 @@ namespace ERAWeb.Controllers
 
         public ActionResult Galeria()
         {
-            return View();
+            AvisoListModel avisoList = new AvisoListModel();
+            avisoList.Avisos = context.AvisoModels.Where(a => !a.DataExclusao.HasValue).OrderByDescending(a => a.Id).ToList();
+            avisoList.Fotos = new List<bool>();
+            AvisoListModel retorno = new AvisoListModel();
+            retorno.Avisos = new List<AvisoModel>();
+            for (int i = 0; i < avisoList.Avisos.Count(); i++)
+            {
+                AvisoModel aviso = avisoList.Avisos[i];
+                avisoList.Fotos.Add(false);
+                foreach (ArquivoModel arq in aviso.Arquivos)
+                {
+                    if (arq.Arquivo.ToUpper().Contains(".JPG"))
+                    {
+                        avisoList.Fotos[i] = true;
+                        retorno.Avisos.Add(aviso);
+                        break;
+                    }
+                }
+            }
+
+            return View(retorno);
         }
 
         public ActionResult Visita()

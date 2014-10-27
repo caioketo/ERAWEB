@@ -9,5 +9,6 @@ namespace ERAWeb.Models
     {
         public List<AvisoModel> Avisos { get; set; }
         public string TurmaDescricao { get; set; }
+        public List<bool> Fotos { get; set; }
     }
 }

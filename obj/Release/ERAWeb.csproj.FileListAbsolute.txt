@@ -55,3 +55,4 @@ C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.dll
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.pdb
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.Migrations.InitialMigrations.resources
 C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.csproj.GenerateResource.Cache
+C:\Users\Caio\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.Migrations._2.resources

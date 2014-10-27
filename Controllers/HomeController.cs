@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERAWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace ERAWeb.Controllers
 {
     public class HomeController : Controller
     {
+        private ERAContext context = new ERAContext();
         public ActionResult Index()
         {
             return View();
@@ -43,6 +45,29 @@ namespace ERAWeb.Controllers
             return View();
         }
 
+        public ActionResult Inicio()
+        {
+            AvisoListModel avisoList = new AvisoListModel();
+            avisoList.Avisos = context.AvisoModels.Where(a => !a.DataExclusao.HasValue).OrderByDescending(a => a.Id).ToList();
+            avisoList.Fotos = new List<bool>();
+            AvisoListModel retorno = new AvisoListModel();
+            for (int i = 0; i < avisoList.Avisos.Count(); i++)
+            {
+                AvisoModel aviso = avisoList.Avisos[i];
+                avisoList.Fotos.Add(false);
+                foreach (ArquivoModel arq in aviso.Arquivos)
+                {
+                    if (arq.Arquivo.ToUpper().Contains(".JPG"))
+                    {
+                        avisoList.Fotos[i] = true;
+                        retorno.Avisos.Add(aviso);
+                        break;
+                    }
+                }
+            }
+
+            return View(retorno);
+        }
 
         public ActionResult Feed()
         {

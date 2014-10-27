@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using ERAWeb.Models;
 using System.IO;
 using Newtonsoft.Json;
+using System.Drawing;
 
 namespace ERAWeb.Controllers
 {
@@ -56,32 +57,39 @@ namespace ERAWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(HttpPostedFileBase file, ArquivoModel arquivomodel)
+        public ActionResult Create(HttpPostedFileBase[] files, ArquivoModel arquivomodel)
         //public ActionResult Create([Bind(Include="Id,Arquivo,DataExclusao,DataCriacao,DataAlteracao")] ArquivoModel arquivomodel)
         {
-            if (file != null && file.ContentLength > 0)
+            foreach (HttpPostedFileBase file in files)
             {
-                // extract only the fielname
-                var fileName = Path.GetFileName(file.FileName);
-                // store the file inside ~/App_Data/uploads folder
-                var path = Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Content/Arquivos"), fileName);
-                file.SaveAs(path);
-                arquivomodel.Arquivo = fileName;
-            }
-
-            arquivomodel.DataAlteracao = DateTime.Now;
-            arquivomodel.DataCriacao = DateTime.Now;
-            using (var db = GetDB())
-            {
-                if (ModelState.IsValid)
+                if (file != null && file.ContentLength > 0)
                 {
-                    db.ArquivoModels.Add(arquivomodel);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
+                    // extract only the fielname
+                    var fileName = Path.GetFileName(file.FileName);
+                    // store the file inside ~/App_Data/uploads folder
+                    var path = Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Content/Arquivos"), fileName);
+                    file.SaveAs(path);
+                    if (fileName.ToUpper().Contains(".JPG"))
+                    {
+                        Image image = Image.FromFile(fileName);
+                        Image thumb = image.GetThumbnailImage(240, 240, () => false, IntPtr.Zero);
+                        thumb.Save("thumb_" + fileName);
+                    }
+                    arquivomodel.Arquivo = fileName;
                 }
 
-                return View(arquivomodel);
+                arquivomodel.DataAlteracao = DateTime.Now;
+                arquivomodel.DataCriacao = DateTime.Now;
+                using (var db = GetDB())
+                {
+                    if (ModelState.IsValid)
+                    {
+                        db.ArquivoModels.Add(arquivomodel);
+                        db.SaveChanges();
+                    }
+                }
             }
+            return RedirectToAction("Index");
         }
 
         // POST: /Arquivo/Create
