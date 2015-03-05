@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta name="google-site-verification" content="jFa-yT0ZDHyIilYzJNGX4Kt0MF4eEahFNbolv6PCalg" />
     <title>Escola Regina Altman - Educação Infantil e Ensino Fundamental</title>
     <!-- Bootstrap -->
     <link href="~/Content/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -85,7 +86,12 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="@Url.Action("Index", "Home")">Início</a></li>
+                            <li class="subMenuC">
+                                <a href="@Url.Action("Index", "Home")">Início</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("Horario", "Home")">Horários</a></li>
+                                </ul>
+                            </li>
                             <li class="subMenuC">
                                 <a>Ensinos</a>
                                 <ul class="dropdown-menu">

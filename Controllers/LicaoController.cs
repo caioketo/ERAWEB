@@ -52,7 +52,8 @@ namespace ERAWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Id,DataLicao,Conteudo,DisciplinaId,TurmaId,DataExclusao,DataCriacao,DataAlteracao")] LicaoModel licaomodel)
+        public ActionResult Create([Bind(Include="Id,DataLicao,Conteudo,DisciplinaId,TurmaId,DataExclusao,DataCriacao,DataAlteracao")] LicaoModel licaomodel,
+            [Bind(Include = "DataEntregaLicao")] DateTime? DataEntregaLicao)
         {
             if (ModelState.IsValid)
             {
@@ -60,6 +61,20 @@ namespace ERAWeb.Controllers
                 licaomodel.DataCriacao = DateTime.Now;
                 db.Licoes.Add(licaomodel);
                 db.SaveChanges();
+
+                if (DataEntregaLicao.HasValue)
+                {
+                    LicaoModel licao2 = new LicaoModel();
+                    licao2.Conteudo = licaomodel.Conteudo;
+                    licao2.DataLicao = DataEntregaLicao.Value;
+                    licao2.DisciplinaId = licaomodel.DisciplinaId;
+                    licao2.TurmaId = licaomodel.TurmaId;
+                    licao2.DataCriacao = licaomodel.DataCriacao;
+                    licao2.DataAlteracao = licaomodel.DataAlteracao;
+                    db.Licoes.Add(licao2);
+                    db.SaveChanges();
+                }
+
                 return RedirectToAction("Index");
             }
 

@@ -71,5 +71,7 @@ namespace ERAWeb.Models
 
         public System.Data.Entity.DbSet<ERAWeb.Models.CursoModel> CursoModels { get; set; }
 
+        public System.Data.Entity.DbSet<ERAWeb.Models.BoletimModel> BoletimModels { get; set; }
+
     }
 }

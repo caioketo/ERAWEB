@@ -45,6 +45,11 @@ namespace ERAWeb.Controllers
             return View();
         }
 
+        public ActionResult Horario()
+        {
+            return View();
+        }
+
         public ActionResult Inicio()
         {
             AvisoListModel avisoList = new AvisoListModel();

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<ERAWeb.Models.BoletimModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Boletim</h2>
+
+<br />
+<br />
+<br />
+<table border="2" cellpadding="10px" cellspacing="10px" style="width:100%; text-align:center">
+    <tbody class="customBody">
+        <tr>
+            <td rowspan="2">
+                Disciplina
+            </td>
+            <td colspan="4">1º Trimestre</td>
+            <td colspan="4">2º Trimestre</td>
+            <td colspan="4">3º Trimestre</td>
+        </tr>
+        <tr>
+            <td>
+                Nota
+            </td>
+            <td>
+                Rec
+            </td>
+            <td>
+                Média
+            </td>
+            <td>
+                FT
+            </td>
+            <td>
+                Nota
+            </td>
+            <td>
+                Rec
+            </td>
+            <td>
+                Média
+            </td>
+            <td>
+                FT
+            </td>
+            <td>
+                Nota
+            </td>
+            <td>
+                Rec
+            </td>
+            <td>
+                Média
+            </td>
+            <td>
+                FT
+            </td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisciplinaDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim1Nota)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim1Rec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim1Media)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim1Faltas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim2Nota)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim2Rec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim2Media)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim2Faltas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim3Nota)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim3Rec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim3Media)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotaTrim3Faltas) 
+                </td>
+            </tr>
+        }
+
+</table>

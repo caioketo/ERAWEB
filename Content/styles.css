@@ -1211,3 +1211,15 @@ background: rgba(0,0,0,0.3);
 color: #fff; width: 100%;
 font-size: 2rem; padding: .6rem;
 }
+
+table {
+    border-style: solid;
+}
+
+tr {
+    border-style: solid;
+}
+
+td {
+    border-style: solid;
+}

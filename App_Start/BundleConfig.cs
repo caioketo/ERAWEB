@@ -20,6 +20,9 @@ namespace ERAWeb
             bundles.Add(new ScriptBundle("~/bundles/jqueryTable").Include(
                         "~/Scripts/jquery.dataTables.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jquery-ui").Include(
+                        "~/Scripts/jquery-ui.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/caioketo").Include(
                         "~/Scripts/custom.js"));
 

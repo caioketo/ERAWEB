@@ -17,7 +17,7 @@
                     <div class="imagens">
                         @foreach (var arquivo in item.Arquivos)
                         {
-                            <a class="fancybox" href="~/Content/Arquivos/@arquivo.Arquivo" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Arquivos/@arquivo.Arquivo" alt="" /></a>
+                            <a class="fancybox" href="~/Content/Arquivos/@arquivo.Arquivo" data-fancybox-group="gallery"><img class="erathumb" src="~/Content/Arquivos/thumb_@arquivo.Arquivo" alt="" /></a>
                         }
                     </div>
                 </div>
@@ -30,3 +30,14 @@
 </table>
 <br />
 <br />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            *  Simple image gallery. Uses default settings
+            */
+
+        $('.fancybox').fancybox();
+
+    });
+</script>

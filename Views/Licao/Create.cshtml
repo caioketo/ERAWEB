@@ -21,7 +21,12 @@
             </span>
             @Html.TextBoxFor(model => model.DataLicao, new { @class = "form-control datepicker", placeholder = "Selecione a data..." })
             @Html.ValidationMessageFor(model => model.DataLicao)
-        </p>
+        </p>    
+        <span class="h2">
+            <b>Data de Entrega da Lição</b>
+        </span>
+        <input class="form-control datepicker" data-val="true"
+               id="DataEntregaLicao" name="DataEntregaLicao" placeholder="Selecione a data..." type="text" value="">
 
 
         <p>
@@ -60,10 +65,11 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery-ui")
 
     <script type="text/javascript">
         $(function () { // will trigger when the document is ready
-            $('.datepicker').datepicker(); //Initialise any date pickers
+            $('.form-control datepicker').datepicker(); //Initialise any date pickers
         });
     </script>
 }
