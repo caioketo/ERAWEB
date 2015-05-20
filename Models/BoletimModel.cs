@@ -9,8 +9,11 @@ namespace ERAWeb.Models
     public class BoletimModel : BaseEntity
     {
         //public AlunoModel Aluno { get; set; }
-        public DisciplinaModel Disciplina { get; set; }
-        public NotasBoletim NotaTrim1 { get; set; }
+        public int AlunoId { get; set; }
+        public int DisciplinaId { get; set; }
+        public virtual DisciplinaModel Disciplina { get; set; }
+        public int NotaTrim1Id { get; set; }
+        public virtual NotasBoletim NotaTrim1 { get; set; }
         public NotasBoletim NotaTrim2 { get; set; }
         public NotasBoletim NotaTrim3 { get; set; }
 
@@ -41,7 +44,7 @@ namespace ERAWeb.Models
         {
             get
             {
-                if (NotaTrim1 == null || NotaTrim1.Rec <= 0)
+                if (NotaTrim1 == null || NotaTrim1.Rec < 0)
                 {
                     return "";
                 }
@@ -87,7 +90,7 @@ namespace ERAWeb.Models
             {
                 if (NotaTrim2 == null)
                 {
-                    return "0";
+                    return "";
                 }
                 return NotaTrim2.Nota.ToString("F1", CultureInfo.CreateSpecificCulture("pt-BR"));
             }
@@ -97,7 +100,7 @@ namespace ERAWeb.Models
         {
             get
             {
-                if (NotaTrim2 == null || NotaTrim2.Rec <= 0)
+                if (NotaTrim2 == null || NotaTrim2.Rec < 0)
                 {
                     return "";
                 }
@@ -121,6 +124,10 @@ namespace ERAWeb.Models
         {
             get
             {
+                if (NotaTrim2 == null)
+                {
+                    return "";
+                }
                 return DblNotaTrim2Media.ToString("F1", CultureInfo.CreateSpecificCulture("pt-BR"));
             }
         }
@@ -143,7 +150,7 @@ namespace ERAWeb.Models
             {
                 if (NotaTrim3 == null)
                 {
-                    return "0";
+                    return "";
                 }
                 return NotaTrim3.Nota.ToString("F1", CultureInfo.CreateSpecificCulture("pt-BR"));
             }
@@ -153,7 +160,7 @@ namespace ERAWeb.Models
         {
             get
             {
-                if (NotaTrim3 == null || NotaTrim3.Rec <= 0)
+                if (NotaTrim3 == null || NotaTrim3.Rec < 0)
                 {
                     return "";
                 }
@@ -177,6 +184,10 @@ namespace ERAWeb.Models
         {
             get
             {
+                if (NotaTrim3 == null)
+                {
+                    return "";
+                }
                 return DblNotaTrim3Media.ToString("F1", CultureInfo.CreateSpecificCulture("pt-BR"));
             }
         }

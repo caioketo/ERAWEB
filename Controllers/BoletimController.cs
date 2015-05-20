@@ -15,9 +15,9 @@ namespace ERAWeb.Controllers
         private ERAContext db = new ERAContext();
 
         // GET: Boletim
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            return View(db.BoletimModels.ToList());
+            return View(db.BoletimModels.Where(b => b.AlunoId == id).ToList());
         }
 
         // GET: Boletim/Details/5

@@ -39,7 +39,7 @@ namespace ERAWeb.Controllers
         }
 
         public ActionResult Avisos(int id)
-        {
+        { 
             AvisoListModel avisoList = new AvisoListModel();
             avisoList.Avisos = context.AvisoModels.Where(a => !a.DataExclusao.HasValue && a.Turmas.Any(t => t.Id == id)).OrderByDescending(a => a.Id).ToList();
             TurmaModel turma = context.TurmaModels.Where(t => t.Id == id).FirstOrDefault();

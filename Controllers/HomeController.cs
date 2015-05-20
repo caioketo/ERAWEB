@@ -25,6 +25,11 @@ namespace ERAWeb.Controllers
             return View();
         }
 
+        public ActionResult Amalia()
+        {
+            return View();
+        }
+
         public ActionResult Ambientes()
         {
             return View();

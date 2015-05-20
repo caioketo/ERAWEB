@@ -10,6 +10,8 @@ using ERAWeb.Models;
 using System.IO;
 using Newtonsoft.Json;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 
 namespace ERAWeb.Controllers
 {
@@ -52,6 +54,37 @@ namespace ERAWeb.Controllers
             return View();
         }
 
+
+        public static Image ResizeImage(Image image, Size size, bool preserveAspectRatio = true)
+        {
+            int newWidth;
+            int newHeight;
+            if (preserveAspectRatio)
+            {
+                var originalWidth = image.Width;
+                var originalHeight = image.Height;
+                var percentWidth = size.Width / (float)originalWidth;
+                var percentHeight = size.Height / (float)originalHeight;
+                var percent = percentHeight < percentWidth ? percentHeight : percentWidth;
+                newWidth = (int)(originalWidth * percent);
+                newHeight = (int)(originalHeight * percent);
+            }
+            else
+            {
+                newWidth = size.Width;
+                newHeight = size.Height;
+            }
+            Image newImage = new Bitmap(newWidth, newHeight);
+            using (var graphicsHandle = Graphics.FromImage(newImage))
+            {
+                graphicsHandle.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphicsHandle.SmoothingMode = SmoothingMode.HighQuality;
+                graphicsHandle.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                graphicsHandle.DrawImage(image, 0, 0, newWidth, newHeight);
+            }
+            return newImage;
+        }
+
         // POST: /Arquivo/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -68,12 +101,29 @@ namespace ERAWeb.Controllers
                     var fileName = Path.GetFileName(file.FileName);
                     // store the file inside ~/App_Data/uploads folder
                     var path = Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Content/Arquivos"), fileName);
-                    file.SaveAs(path);
+                    if (!System.IO.File.Exists(path))
+                    {
+                        file.SaveAs(path);
+                    }
+                    
                     if (fileName.ToUpper().Contains(".JPG"))
                     {
-                        Image image = Image.FromFile(fileName);
-                        Image thumb = image.GetThumbnailImage(240, 240, () => false, IntPtr.Zero);
-                        thumb.Save("thumb_" + fileName);
+                        using (Image image = Image.FromFile(path))
+                        {
+                            Image thumb = ResizeImage(image, new Size(240, 240), true);
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                thumb.Save(ms, ImageFormat.Png);
+
+                                using (FileStream fstream = new FileStream(Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Content/Arquivos"), "thumb_" + fileName), FileMode.Create, FileAccess.Write))
+                                {
+                                    ms.WriteTo(fstream);
+                                    fstream.Close();
+                                }
+                                ms.Close();
+                            }
+                        }
+                        
                     }
                     arquivomodel.Arquivo = fileName;
                 }

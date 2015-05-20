@@ -181,6 +181,10 @@
     <Compile Include="Migrations\201410141554061_2.Designer.cs">
       <DependentUpon>201410141554061_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505201738154_Teste.cs" />
+    <Compile Include="Migrations\201505201738154_Teste.Designer.cs">
+      <DependentUpon>201505201738154_Teste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArquivoModel.cs" />
@@ -212,9 +216,17 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\amalia_272.jpg" />
+    <Content Include="Content\amalia_273.jpg" />
+    <Content Include="Content\amalia_275.jpg" />
+    <Content Include="Content\amalia_300.jpg" />
+    <Content Include="Content\amalia_301.jpg" />
+    <Content Include="Content\amalia_302.jpg" />
+    <Content Include="Content\amalia_71.jpg" />
     <Content Include="Content\blank.gif" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\calendario.jpg" />
     <Content Include="Content\chromaton-red.css" />
     <Content Include="Content\datepicker.css" />
     <Content Include="Content\datepicker3.css" />
@@ -257,6 +269,7 @@
     <Content Include="Content\Images\aviso.png" />
     <Content Include="Content\Images\blog_pic1.jpg" />
     <Content Include="Content\Images\blog_pic2.jpg" />
+    <Content Include="Content\Images\borboleta.jpg" />
     <Content Include="Content\Images\c-arrows.png" />
     <Content Include="Content\Images\c1.jpg" />
     <Content Include="Content\Images\c2.jpg" />
@@ -307,6 +320,14 @@
     <Content Include="Content\Fonts\myriad-web-pro.ttf" />
     <Content Include="Content\Fonts\neo-sans-bold.ttf" />
     <Content Include="Content\Images\Rodape.psd" />
+    <Content Include="Content\formulario.docx" />
+    <Content Include="Content\calendario_provas_1.docx" />
+    <Content Include="Content\fixacao_portugues.docx" />
+    <Content Include="Content\conteudo_1_tri_6.docx" />
+    <Content Include="Content\conteudo_1_tri_7.docx" />
+    <Content Include="Content\conteudo_1_tri_8_A.docx" />
+    <Content Include="Content\conteudo_1_tri_8_B.docx" />
+    <Content Include="Content\conteudo_1_tri_9.docx" />
     <None Include="Properties\PublishProfiles\altmanserv.pubxml" />
     <None Include="Properties\PublishProfiles\teste.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -421,6 +442,7 @@
     <Content Include="Views\Boletim\Edit.cshtml" />
     <Content Include="Views\Boletim\Index.cshtml" />
     <Content Include="Views\Home\Horario.cshtml" />
+    <Content Include="Views\Home\Amalia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -442,6 +464,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201410141554061_2.resx">
       <DependentUpon>201410141554061_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505201738154_Teste.resx">
+      <DependentUpon>201505201738154_Teste.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

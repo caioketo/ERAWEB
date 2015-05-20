@@ -6,8 +6,8 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwF0PeXd602FnMEaW3imMAAAAAACAAAAAAAQZgAAAAEAACAAAACwAUX+OHLdXq21EWn3Q7qMMNWiu+HZJKrhOHFUBdOTXAAAAAAOgAAAAAIAACAAAABnH3gY1jATwcErgs/dL7DFqJldxYwzJekCHpuY0/zj/yAAAADPjwZGIQo5u0sLIy5D0rrxCtW1xkJCFzb0wkLwwluJH0AAAAAg+qFpu2mrSGJjiIfnxiDm7koj9Om0ihQ5JvCzn9LEZTsjlted/QpP+JbQUGARlbx+8Pcz9XHUs77v4e1kI4Xf</EncryptedPassword>
-    <_PublishTargetUrl>ftp://69.64.46.12/httpdocs</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAckBbFEDEw0W3D2JD61uijwAAAAACAAAAAAAQZgAAAAEAACAAAABLE9B5sDi66o3HjJxzXQ9kFVW3bziZLV3Mrrye3Qej+QAAAAAOgAAAAAIAACAAAAD0rJ2uWlj9fYZTn71z1lepvYBM7zyEqIA+Tc3zkcJIxyAAAABChvFzJC1dEEuvx7PW5KZdxKrU2r6frhbruq0fjKkXlUAAAABKTFQkVSQNzhFrTstOkpRs61QnOHRe2JA6s6qbhTGGRy5vMgG+Mwejxahmx6P33PRMHY94W8f5nf/7ihN3uo0p</EncryptedPassword>
+    <_PublishTargetUrl>ftp://escolareginaaltman.com.br/httpdocs</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 09:18:11</publishTime>
     </File>
     <File Include="bin/ERAWeb.dll">
-      <publishTime>03/05/2015 11:08:24</publishTime>
+      <publishTime>05/20/2015 16:44:36</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>05/21/2014 09:18:14</publishTime>
@@ -59,10 +59,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 09:18:17</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>05/21/2014 09:18:02</publishTime>
+      <publishTime>07/08/2013 14:15:08</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>05/21/2014 09:18:05</publishTime>
+      <publishTime>10/02/2013 11:10:10</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>05/21/2014 09:18:15</publishTime>
@@ -91,6 +91,27 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/WebGrease.dll">
       <publishTime>05/21/2014 09:18:08</publishTime>
     </File>
+    <File Include="Content/amalia_272.jpg">
+      <publishTime>04/13/2015 13:17:06</publishTime>
+    </File>
+    <File Include="Content/amalia_273.jpg">
+      <publishTime>04/13/2015 13:17:22</publishTime>
+    </File>
+    <File Include="Content/amalia_275.jpg">
+      <publishTime>04/13/2015 13:17:40</publishTime>
+    </File>
+    <File Include="Content/amalia_300.jpg">
+      <publishTime>04/10/2015 14:11:00</publishTime>
+    </File>
+    <File Include="Content/amalia_301.jpg">
+      <publishTime>04/10/2015 14:12:00</publishTime>
+    </File>
+    <File Include="Content/amalia_302.jpg">
+      <publishTime>04/10/2015 14:12:00</publishTime>
+    </File>
+    <File Include="Content/amalia_71.jpg">
+      <publishTime>04/13/2015 13:16:14</publishTime>
+    </File>
     <File Include="Content/blank.gif">
       <publishTime>06/14/2013 02:12:28</publishTime>
     </File>
@@ -100,8 +121,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap.min.css">
       <publishTime>08/06/2014 08:09:45</publishTime>
     </File>
+    <File Include="Content/calendario.jpg">
+      <publishTime>04/02/2015 11:12:09</publishTime>
+    </File>
+    <File Include="Content/calendario_provas_1.docx">
+      <publishTime>04/16/2015 07:32:29</publishTime>
+    </File>
     <File Include="Content/chromaton-red.css">
       <publishTime>06/02/2014 10:34:27</publishTime>
+    </File>
+    <File Include="Content/conteudo_1_tri_6.docx">
+      <publishTime>04/16/2015 10:50:16</publishTime>
+    </File>
+    <File Include="Content/conteudo_1_tri_7.docx">
+      <publishTime>04/16/2015 10:50:20</publishTime>
+    </File>
+    <File Include="Content/conteudo_1_tri_8_A.docx">
+      <publishTime>04/16/2015 10:50:23</publishTime>
+    </File>
+    <File Include="Content/conteudo_1_tri_8_B.docx">
+      <publishTime>04/16/2015 10:50:25</publishTime>
+    </File>
+    <File Include="Content/conteudo_1_tri_9.docx">
+      <publishTime>04/16/2015 10:50:27</publishTime>
     </File>
     <File Include="Content/datepicker.css">
       <publishTime>01/19/2014 05:18:48</publishTime>
@@ -136,11 +178,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/favicon.ico">
       <publishTime>06/02/2014 11:11:03</publishTime>
     </File>
+    <File Include="Content/fixacao_portugues.docx">
+      <publishTime>04/16/2015 07:32:27</publishTime>
+    </File>
     <File Include="Content/Fonts/myriad-web-pro.ttf">
       <publishTime>06/02/2014 09:34:58</publishTime>
     </File>
     <File Include="Content/Fonts/neo-sans-bold.ttf">
       <publishTime>06/02/2014 10:11:43</publishTime>
+    </File>
+    <File Include="Content/formulario.docx">
+      <publishTime>04/16/2015 07:32:29</publishTime>
     </File>
     <File Include="Content/generic.css">
       <publishTime>07/13/2014 10:33:39</publishTime>
@@ -158,7 +206,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/02/2014 10:08:28</publishTime>
     </File>
     <File Include="Content/Images/15.jpg">
-      <publishTime>11/08/2014 08:03:05</publishTime>
+      <publishTime>08/11/2014 08:03:05</publishTime>
     </File>
     <File Include="Content/Images/15x.jpg">
       <publishTime>06/02/2014 10:16:54</publishTime>
@@ -167,7 +215,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/02/2014 10:08:32</publishTime>
     </File>
     <File Include="Content/Images/4.jpg">
-      <publishTime>11/08/2014 08:02:27</publishTime>
+      <publishTime>08/11/2014 08:02:27</publishTime>
     </File>
     <File Include="Content/Images/4x.jpg">
       <publishTime>06/02/2014 10:16:57</publishTime>
@@ -182,7 +230,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/08/2014 09:35:05</publishTime>
     </File>
     <File Include="Content/Images/78.jpg">
-      <publishTime>11/08/2014 08:02:12</publishTime>
+      <publishTime>08/11/2014 08:02:12</publishTime>
     </File>
     <File Include="Content/Images/78x.jpg">
       <publishTime>06/02/2014 10:17:01</publishTime>
@@ -191,13 +239,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/08/2014 08:02:41</publishTime>
     </File>
     <File Include="Content/Images/80.jpg">
-      <publishTime>11/08/2014 08:01:58</publishTime>
+      <publishTime>08/11/2014 08:01:58</publishTime>
     </File>
     <File Include="Content/Images/80x.jpg">
       <publishTime>06/02/2014 10:17:07</publishTime>
     </File>
     <File Include="Content/Images/81.jpg">
-      <publishTime>11/08/2014 08:02:01</publishTime>
+      <publishTime>08/11/2014 08:02:01</publishTime>
     </File>
     <File Include="Content/Images/81x.jpg">
       <publishTime>06/02/2014 10:17:11</publishTime>
@@ -232,6 +280,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/Images/blog_pic2.jpg">
       <publishTime>05/03/2014 03:50:47</publishTime>
     </File>
+    <File Include="Content/Images/borboleta.jpg">
+      <publishTime>03/17/2015 11:17:22</publishTime>
+    </File>
     <File Include="Content/Images/c-arrows.png">
       <publishTime>05/02/2014 06:32:50</publishTime>
     </File>
@@ -254,7 +305,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/03/2014 06:30:56</publishTime>
     </File>
     <File Include="Content/Images/estrutura_funcional.png">
-      <publishTime>06/02/2014 10:08:15</publishTime>
+      <publishTime>02/06/2014 10:08:15</publishTime>
     </File>
     <File Include="Content/Images/estrutura_funcional_horario.png">
       <publishTime>06/02/2014 10:08:43</publishTime>
@@ -362,7 +413,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/14/2014 00:54:02</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>02/06/2014 11:11:03</publishTime>
+      <publishTime>06/02/2014 11:11:03</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>05/21/2014 09:17:55</publishTime>
@@ -473,7 +524,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/02/2014 09:19:35</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>06/02/2014 09:20:42</publishTime>
+      <publishTime>03/09/2015 07:45:25</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
       <publishTime>05/21/2014 09:18:10</publishTime>
@@ -506,7 +557,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/24/2014 08:47:06</publishTime>
     </File>
     <File Include="Views/Agenda/Licoes.cshtml">
-      <publishTime>08/19/2014 12:03:29</publishTime>
+      <publishTime>03/09/2015 09:06:51</publishTime>
     </File>
     <File Include="Views/Agenda/Provas.cshtml">
       <publishTime>08/19/2014 12:04:47</publishTime>
@@ -545,7 +596,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2014 09:43:06</publishTime>
     </File>
     <File Include="Views/Boletim/Boletim.cshtml">
-      <publishTime>10/16/2014 12:13:06</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Boletim/Create.cshtml">
       <publishTime>11/28/2014 10:50:28</publishTime>
@@ -560,22 +611,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2014 10:50:30</publishTime>
     </File>
     <File Include="Views/Boletim/Index.cshtml">
-      <publishTime>01/06/2015 12:28:54</publishTime>
+      <publishTime>05/06/2015 15:52:58</publishTime>
     </File>
     <File Include="Views/Boletim2/Boletim.cshtml">
       <publishTime>01/06/2015 12:26:34</publishTime>
     </File>
     <File Include="Views/Escola/Ambientes.cshtml">
-      <publishTime>11/08/2014 08:29:27</publishTime>
+      <publishTime>08/11/2014 08:29:27</publishTime>
     </File>
     <File Include="Views/Escola/Contato.cshtml">
-      <publishTime>11/08/2014 10:24:09</publishTime>
+      <publishTime>08/11/2014 10:24:09</publishTime>
     </File>
     <File Include="Views/Escola/Equipe.cshtml">
       <publishTime>08/08/2014 09:41:33</publishTime>
     </File>
     <File Include="Views/Escola/Galeria.cshtml">
-      <publishTime>10/24/2014 09:32:33</publishTime>
+      <publishTime>04/27/2015 11:30:56</publishTime>
     </File>
     <File Include="Views/Escola/Index.cshtml">
       <publishTime>08/08/2014 09:38:48</publishTime>
@@ -603,6 +654,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>05/21/2014 09:17:53</publishTime>
+    </File>
+    <File Include="Views/Home/Amalia.cshtml">
+      <publishTime>04/13/2015 09:11:09</publishTime>
     </File>
     <File Include="Views/Home/Ambientes.cshtml">
       <publishTime>06/02/2014 10:17:24</publishTime>
@@ -632,7 +686,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/05/2015 11:02:48</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/05/2015 11:02:45</publishTime>
+      <publishTime>05/20/2015 13:56:32</publishTime>
     </File>
     <File Include="Views/Home/Index2.cshtml">
       <publishTime>06/13/2014 15:07:16</publishTime>
@@ -680,7 +734,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/05/2015 11:04:54</publishTime>
     </File>
     <File Include="Views/Shared/_Layout2.cshtml">
-      <publishTime>09/06/2014 10:03:33</publishTime>
+      <publishTime>06/09/2014 10:03:33</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>05/21/2014 09:18:10</publishTime>
@@ -695,7 +749,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 09:17:53</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/15/2015 10:43:31</publishTime>
+      <publishTime>05/20/2015 14:54:56</publishTime>
     </File>
   </ItemGroup>
 </Project>

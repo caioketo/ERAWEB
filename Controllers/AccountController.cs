@@ -43,7 +43,7 @@ namespace ERAWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) 
             {
                 var user = await UserManager.FindAsync(model.UserName, model.Password);
                 if (user != null)

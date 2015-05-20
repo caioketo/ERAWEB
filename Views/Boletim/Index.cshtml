@@ -103,4 +103,48 @@
             </tr>
         }
 
+        <tr>
+            <td colspan="13" style="text-align:center">
+                ** RESULTADOS PARCIAIS E FINAIS DO ALUNO **
+            </td>
+        </tr>
+        <tr>
+            <td>Disciplina</td>
+            <td>TOT. FAL.</td>
+            <td>AULAS DADAS</td>
+            <td>% FREQUÊNCIA</td>
+            <td>TOTAL PONTOS</td>
+            <td>MEDIA</td>
+            <td>REC.</td>
+            <td>REC.</td>
+            <td>MEDIA FINAL</td>
+            <td colspan="4">RESULTADOS</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisciplinaDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalFaltas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AulasDadas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Freq)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPontos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MediaGeral)
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="4"></td>
+            </tr>
+        }
 </table>

@@ -114,3 +114,16 @@ C:\Users\Caio\Google Drive\Backup\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.Migra
 C:\Users\Caio\Google Drive\Backup\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.csproj.GenerateResource.Cache
 C:\Users\Caio\Google Drive\Backup\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.dll
 C:\Users\Caio\Google Drive\Backup\SiteERA\ERAWeb\ERAWeb\obj\Release\ERAWeb.pdb
+C:\Users\Caio\Documents\GitHub\ERAWEB\bin\ERAWeb.dll.config
+C:\Users\Caio\Documents\GitHub\ERAWEB\bin\ERAWeb.dll
+C:\Users\Caio\Documents\GitHub\ERAWEB\bin\ERAWeb.pdb
+C:\Users\Caio\Documents\GitHub\ERAWEB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Caio\Documents\GitHub\ERAWEB\bin\Newtonsoft.Json.dll
+C:\Users\Caio\Documents\GitHub\ERAWEB\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.csprojResolveAssemblyReference.cache
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.InitialMigrations.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations._2.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.csproj.GenerateResource.Cache
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.dll
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.pdb
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.Teste.resources

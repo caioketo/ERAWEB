@@ -45,7 +45,7 @@ namespace ERAWeb.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer<ERAContext>(new MigrateDatabaseToLatestVersion<ERAContext, Configuration>());
-            //Database.SetInitializer<ERAContext>(new DropCreateDatabaseIfModelChanges<ERAContext>());
+            //Database.SetInitializer<ERAContext>(new DropCreateDatabaseAlways<ERAContext>());
             modelBuilder.Entity<EventoModel>()
                 .HasMany(a => a.Turmas)
                 .WithMany(b => b.Eventos);
