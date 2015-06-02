@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 09:18:11</publishTime>
     </File>
     <File Include="bin/ERAWeb.dll">
-      <publishTime>05/20/2015 16:44:36</publishTime>
+      <publishTime>06/02/2015 11:59:11</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>05/21/2014 09:18:14</publishTime>
@@ -59,10 +59,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 09:18:17</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>07/08/2013 14:15:08</publishTime>
+      <publishTime>08/07/2013 14:15:08</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>10/02/2013 11:10:10</publishTime>
+      <publishTime>02/10/2013 11:10:10</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>05/21/2014 09:18:15</publishTime>
@@ -101,13 +101,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/13/2015 13:17:40</publishTime>
     </File>
     <File Include="Content/amalia_300.jpg">
-      <publishTime>04/10/2015 14:11:00</publishTime>
+      <publishTime>10/04/2015 14:11:00</publishTime>
     </File>
     <File Include="Content/amalia_301.jpg">
-      <publishTime>04/10/2015 14:12:00</publishTime>
+      <publishTime>10/04/2015 14:12:00</publishTime>
     </File>
     <File Include="Content/amalia_302.jpg">
-      <publishTime>04/10/2015 14:12:00</publishTime>
+      <publishTime>10/04/2015 14:12:00</publishTime>
     </File>
     <File Include="Content/amalia_71.jpg">
       <publishTime>04/13/2015 13:16:14</publishTime>
@@ -116,19 +116,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/14/2013 02:12:28</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>08/07/2014 09:01:34</publishTime>
+      <publishTime>07/08/2014 09:01:34</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>08/06/2014 08:09:45</publishTime>
+      <publishTime>06/08/2014 08:09:45</publishTime>
     </File>
     <File Include="Content/calendario.jpg">
-      <publishTime>04/02/2015 11:12:09</publishTime>
+      <publishTime>02/04/2015 11:12:09</publishTime>
     </File>
     <File Include="Content/calendario_provas_1.docx">
       <publishTime>04/16/2015 07:32:29</publishTime>
     </File>
     <File Include="Content/chromaton-red.css">
-      <publishTime>06/02/2014 10:34:27</publishTime>
+      <publishTime>02/06/2014 10:34:27</publishTime>
     </File>
     <File Include="Content/conteudo_1_tri_6.docx">
       <publishTime>04/16/2015 10:50:16</publishTime>
@@ -155,7 +155,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 10:36:35</publishTime>
     </File>
     <File Include="Content/estilos2.css">
-      <publishTime>06/02/2014 09:54:27</publishTime>
+      <publishTime>02/06/2014 09:54:27</publishTime>
     </File>
     <File Include="Content/fancybox_buttons.png">
       <publishTime>06/14/2013 02:12:28</publishTime>
@@ -176,16 +176,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/14/2013 02:12:28</publishTime>
     </File>
     <File Include="Content/favicon.ico">
-      <publishTime>06/02/2014 11:11:03</publishTime>
+      <publishTime>02/06/2014 11:11:03</publishTime>
     </File>
     <File Include="Content/fixacao_portugues.docx">
       <publishTime>04/16/2015 07:32:27</publishTime>
     </File>
     <File Include="Content/Fonts/myriad-web-pro.ttf">
-      <publishTime>06/02/2014 09:34:58</publishTime>
+      <publishTime>02/06/2014 09:34:58</publishTime>
     </File>
     <File Include="Content/Fonts/neo-sans-bold.ttf">
-      <publishTime>06/02/2014 10:11:43</publishTime>
+      <publishTime>02/06/2014 10:11:43</publishTime>
     </File>
     <File Include="Content/formulario.docx">
       <publishTime>04/16/2015 07:32:29</publishTime>
@@ -194,154 +194,154 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/13/2014 10:33:39</publishTime>
     </File>
     <File Include="Content/Images/100.jpg">
-      <publishTime>08/07/2014 11:13:41</publishTime>
+      <publishTime>07/08/2014 11:13:41</publishTime>
     </File>
     <File Include="Content/Images/109.jpg">
-      <publishTime>08/07/2014 11:37:56</publishTime>
+      <publishTime>07/08/2014 11:37:56</publishTime>
     </File>
     <File Include="Content/Images/11x.jpg">
-      <publishTime>06/02/2014 10:08:22</publishTime>
+      <publishTime>02/06/2014 10:08:22</publishTime>
     </File>
     <File Include="Content/Images/11z.jpg">
-      <publishTime>06/02/2014 10:08:28</publishTime>
+      <publishTime>02/06/2014 10:08:28</publishTime>
     </File>
     <File Include="Content/Images/15.jpg">
-      <publishTime>08/11/2014 08:03:05</publishTime>
+      <publishTime>11/08/2014 08:03:05</publishTime>
     </File>
     <File Include="Content/Images/15x.jpg">
-      <publishTime>06/02/2014 10:16:54</publishTime>
+      <publishTime>02/06/2014 10:16:54</publishTime>
     </File>
     <File Include="Content/Images/2z.jpg">
-      <publishTime>06/02/2014 10:08:32</publishTime>
+      <publishTime>02/06/2014 10:08:32</publishTime>
     </File>
     <File Include="Content/Images/4.jpg">
-      <publishTime>08/11/2014 08:02:27</publishTime>
+      <publishTime>11/08/2014 08:02:27</publishTime>
     </File>
     <File Include="Content/Images/4x.jpg">
-      <publishTime>06/02/2014 10:16:57</publishTime>
+      <publishTime>02/06/2014 10:16:57</publishTime>
     </File>
     <File Include="Content/Images/57.jpg">
-      <publishTime>08/07/2014 11:13:49</publishTime>
+      <publishTime>07/08/2014 11:13:49</publishTime>
     </File>
     <File Include="Content/Images/59z.jpg">
-      <publishTime>06/02/2014 10:08:36</publishTime>
+      <publishTime>02/06/2014 10:08:36</publishTime>
     </File>
     <File Include="Content/Images/77.jpg">
       <publishTime>08/08/2014 09:35:05</publishTime>
     </File>
     <File Include="Content/Images/78.jpg">
-      <publishTime>08/11/2014 08:02:12</publishTime>
+      <publishTime>11/08/2014 08:02:12</publishTime>
     </File>
     <File Include="Content/Images/78x.jpg">
-      <publishTime>06/02/2014 10:17:01</publishTime>
+      <publishTime>02/06/2014 10:17:01</publishTime>
     </File>
     <File Include="Content/Images/8.jpg">
-      <publishTime>11/08/2014 08:02:41</publishTime>
+      <publishTime>08/11/2014 08:02:41</publishTime>
     </File>
     <File Include="Content/Images/80.jpg">
-      <publishTime>08/11/2014 08:01:58</publishTime>
+      <publishTime>11/08/2014 08:01:58</publishTime>
     </File>
     <File Include="Content/Images/80x.jpg">
-      <publishTime>06/02/2014 10:17:07</publishTime>
+      <publishTime>02/06/2014 10:17:07</publishTime>
     </File>
     <File Include="Content/Images/81.jpg">
-      <publishTime>08/11/2014 08:02:01</publishTime>
+      <publishTime>11/08/2014 08:02:01</publishTime>
     </File>
     <File Include="Content/Images/81x.jpg">
-      <publishTime>06/02/2014 10:17:11</publishTime>
+      <publishTime>02/06/2014 10:17:11</publishTime>
     </File>
     <File Include="Content/Images/8x.jpg">
-      <publishTime>06/02/2014 10:17:14</publishTime>
+      <publishTime>02/06/2014 10:17:14</publishTime>
     </File>
     <File Include="Content/Images/94x.jpg">
-      <publishTime>06/02/2014 10:08:39</publishTime>
+      <publishTime>02/06/2014 10:08:39</publishTime>
     </File>
     <File Include="Content/Images/99.jpg">
       <publishTime>08/08/2014 09:41:17</publishTime>
     </File>
     <File Include="Content/Images/99x.jpg">
-      <publishTime>06/02/2014 10:15:37</publishTime>
+      <publishTime>02/06/2014 10:15:37</publishTime>
     </File>
     <File Include="Content/Images/ads_pic.jpg">
-      <publishTime>05/03/2014 03:30:44</publishTime>
+      <publishTime>03/05/2014 03:30:44</publishTime>
     </File>
     <File Include="Content/Images/agenda.png">
-      <publishTime>06/02/2014 09:24:47</publishTime>
+      <publishTime>02/06/2014 09:24:47</publishTime>
     </File>
     <File Include="Content/Images/arrows.png">
-      <publishTime>06/02/2014 09:24:54</publishTime>
+      <publishTime>02/06/2014 09:24:54</publishTime>
     </File>
     <File Include="Content/Images/aviso.png">
-      <publishTime>06/02/2014 09:25:00</publishTime>
+      <publishTime>02/06/2014 09:25:00</publishTime>
     </File>
     <File Include="Content/Images/blog_pic1.jpg">
-      <publishTime>05/03/2014 03:40:51</publishTime>
+      <publishTime>03/05/2014 03:40:51</publishTime>
     </File>
     <File Include="Content/Images/blog_pic2.jpg">
-      <publishTime>05/03/2014 03:50:47</publishTime>
+      <publishTime>03/05/2014 03:50:47</publishTime>
     </File>
     <File Include="Content/Images/borboleta.jpg">
       <publishTime>03/17/2015 11:17:22</publishTime>
     </File>
     <File Include="Content/Images/c-arrows.png">
-      <publishTime>05/02/2014 06:32:50</publishTime>
+      <publishTime>02/05/2014 06:32:50</publishTime>
     </File>
     <File Include="Content/Images/c1.jpg">
-      <publishTime>05/02/2014 08:17:47</publishTime>
+      <publishTime>02/05/2014 08:17:47</publishTime>
     </File>
     <File Include="Content/Images/c2.jpg">
-      <publishTime>05/02/2014 08:16:46</publishTime>
+      <publishTime>02/05/2014 08:16:46</publishTime>
     </File>
     <File Include="Content/Images/c3.jpg">
-      <publishTime>05/02/2014 08:18:41</publishTime>
+      <publishTime>02/05/2014 08:18:41</publishTime>
     </File>
     <File Include="Content/Images/c4.jpg">
-      <publishTime>05/02/2014 08:42:24</publishTime>
+      <publishTime>02/05/2014 08:42:24</publishTime>
     </File>
     <File Include="Content/Images/chegar.png">
-      <publishTime>06/02/2014 09:25:08</publishTime>
+      <publishTime>02/06/2014 09:25:08</publishTime>
     </File>
     <File Include="Content/Images/det_pic.jpg">
-      <publishTime>05/03/2014 06:30:56</publishTime>
+      <publishTime>03/05/2014 06:30:56</publishTime>
     </File>
     <File Include="Content/Images/estrutura_funcional.png">
-      <publishTime>02/06/2014 10:08:15</publishTime>
+      <publishTime>06/02/2014 10:08:15</publishTime>
     </File>
     <File Include="Content/Images/estrutura_funcional_horario.png">
-      <publishTime>06/02/2014 10:08:43</publishTime>
+      <publishTime>02/06/2014 10:08:43</publishTime>
     </File>
     <File Include="Content/Images/flautax.jpg">
-      <publishTime>06/02/2014 10:10:06</publishTime>
+      <publishTime>02/06/2014 10:10:06</publishTime>
     </File>
     <File Include="Content/Images/fundo.jpg">
-      <publishTime>06/02/2014 09:25:14</publishTime>
+      <publishTime>02/06/2014 09:25:14</publishTime>
     </File>
     <File Include="Content/Images/inicio.jpg">
-      <publishTime>08/05/2014 13:28:17</publishTime>
+      <publishTime>05/08/2014 13:28:17</publishTime>
     </File>
     <File Include="Content/Images/inicio1.jpg">
-      <publishTime>06/02/2014 09:25:23</publishTime>
+      <publishTime>02/06/2014 09:25:23</publishTime>
     </File>
     <File Include="Content/Images/inicio2.jpg">
-      <publishTime>06/02/2014 09:25:31</publishTime>
+      <publishTime>02/06/2014 09:25:31</publishTime>
     </File>
     <File Include="Content/Images/menu.png">
-      <publishTime>06/02/2014 09:25:37</publishTime>
+      <publishTime>02/06/2014 09:25:37</publishTime>
     </File>
     <File Include="Content/Images/menux.jpg">
-      <publishTime>06/02/2014 09:25:43</publishTime>
+      <publishTime>02/06/2014 09:25:43</publishTime>
     </File>
     <File Include="Content/Images/menux2.jpg">
-      <publishTime>06/02/2014 09:25:50</publishTime>
+      <publishTime>02/06/2014 09:25:50</publishTime>
     </File>
     <File Include="Content/Images/menux3.jpg">
-      <publishTime>06/02/2014 09:25:56</publishTime>
+      <publishTime>02/06/2014 09:25:56</publishTime>
     </File>
     <File Include="Content/Images/pic1.jpg">
-      <publishTime>05/02/2014 06:13:10</publishTime>
+      <publishTime>02/05/2014 06:13:10</publishTime>
     </File>
     <File Include="Content/Images/rodape.jpg">
-      <publishTime>06/02/2014 09:26:00</publishTime>
+      <publishTime>02/06/2014 09:26:00</publishTime>
     </File>
     <File Include="Content/Images/rodape.png">
       <publishTime>08/08/2014 09:07:25</publishTime>
@@ -350,22 +350,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/08/2014 09:04:29</publishTime>
     </File>
     <File Include="Content/Images/slider_bg.jpg">
-      <publishTime>08/05/2014 13:03:29</publishTime>
+      <publishTime>05/08/2014 13:03:29</publishTime>
     </File>
     <File Include="Content/Images/social-icons.png">
-      <publishTime>05/03/2014 02:48:57</publishTime>
+      <publishTime>03/05/2014 02:48:57</publishTime>
     </File>
     <File Include="Content/Images/textos.png">
-      <publishTime>06/02/2014 09:26:10</publishTime>
+      <publishTime>02/06/2014 09:26:10</publishTime>
     </File>
     <File Include="Content/Images/topo.jpg">
-      <publishTime>06/02/2014 09:04:07</publishTime>
+      <publishTime>02/06/2014 09:04:07</publishTime>
     </File>
     <File Include="Content/Images/transporte.png">
-      <publishTime>06/02/2014 09:26:17</publishTime>
+      <publishTime>02/06/2014 09:26:17</publishTime>
     </File>
     <File Include="Content/jquery.dataTables.min.css">
-      <publishTime>08/06/2014 08:12:54</publishTime>
+      <publishTime>06/08/2014 08:12:54</publishTime>
     </File>
     <File Include="Content/jquery.fancybox-buttons.css">
       <publishTime>06/14/2013 02:12:28</publishTime>
@@ -389,22 +389,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/23/2014 08:12:26</publishTime>
     </File>
     <File Include="Content/logo.png">
-      <publishTime>06/02/2014 11:10:53</publishTime>
+      <publishTime>02/06/2014 11:10:53</publishTime>
     </File>
     <File Include="Content/menu.css">
       <publishTime>05/27/2014 08:57:54</publishTime>
     </File>
     <File Include="Content/owl.carousel.css">
-      <publishTime>05/03/2014 09:07:16</publishTime>
+      <publishTime>03/05/2014 09:07:16</publishTime>
     </File>
     <File Include="Content/shadowbox.css">
-      <publishTime>06/02/2014 09:19:51</publishTime>
+      <publishTime>02/06/2014 09:19:51</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>05/21/2014 12:57:17</publishTime>
     </File>
     <File Include="Content/slider.css">
-      <publishTime>08/05/2014 02:03:56</publishTime>
+      <publishTime>05/08/2014 02:03:56</publishTime>
     </File>
     <File Include="Content/styles.css">
       <publishTime>01/27/2015 12:51:50</publishTime>
@@ -413,7 +413,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/14/2014 00:54:02</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>06/02/2014 11:11:03</publishTime>
+      <publishTime>02/06/2014 11:11:03</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>05/21/2014 09:17:55</publishTime>
@@ -437,10 +437,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2014 05:18:48</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>05/01/2014 02:10:36</publishTime>
+      <publishTime>01/05/2014 02:10:36</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>05/01/2014 02:10:46</publishTime>
+      <publishTime>01/05/2014 02:10:46</publishTime>
     </File>
     <File Include="Scripts/custom.js">
       <publishTime>05/23/2014 09:51:37</publishTime>
@@ -458,10 +458,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/05/2015 09:10:16</publishTime>
     </File>
     <File Include="Scripts/jquery.cslider.js">
-      <publishTime>05/01/2014 03:01:36</publishTime>
+      <publishTime>01/05/2014 03:01:36</publishTime>
     </File>
     <File Include="Scripts/jquery.dataTables.min.js">
-      <publishTime>05/01/2014 17:42:50</publishTime>
+      <publishTime>01/05/2014 17:42:50</publishTime>
     </File>
     <File Include="Scripts/jquery.fancybox-buttons.js">
       <publishTime>06/14/2013 02:12:28</publishTime>
@@ -479,7 +479,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/14/2013 02:12:28</publishTime>
     </File>
     <File Include="Scripts/jquery.min.js">
-      <publishTime>05/01/2014 02:10:28</publishTime>
+      <publishTime>01/05/2014 02:10:28</publishTime>
     </File>
     <File Include="Scripts/jquery.mousewheel-3.0.6.pack.js">
       <publishTime>06/14/2013 02:12:28</publishTime>
@@ -500,16 +500,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 09:18:17</publishTime>
     </File>
     <File Include="Scripts/layout.js">
-      <publishTime>08/07/2014 10:39:51</publishTime>
+      <publishTime>07/08/2014 10:39:51</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>05/21/2014 09:18:03</publishTime>
     </File>
     <File Include="Scripts/modernizr.custom.28468.js">
-      <publishTime>05/01/2014 03:01:34</publishTime>
+      <publishTime>01/05/2014 03:01:34</publishTime>
     </File>
     <File Include="Scripts/owl.carousel.js">
-      <publishTime>05/02/2014 06:31:15</publishTime>
+      <publishTime>02/05/2014 06:31:15</publishTime>
     </File>
     <File Include="Scripts/respond.js">
       <publishTime>05/21/2014 09:18:08</publishTime>
@@ -518,10 +518,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/21/2014 09:18:08</publishTime>
     </File>
     <File Include="Scripts/scripts.js">
-      <publishTime>06/02/2014 09:19:23</publishTime>
+      <publishTime>02/06/2014 09:19:23</publishTime>
     </File>
     <File Include="Scripts/shadowbox.js">
-      <publishTime>06/02/2014 09:19:35</publishTime>
+      <publishTime>02/06/2014 09:19:35</publishTime>
     </File>
     <File Include="Scripts/_references.js">
       <publishTime>03/09/2015 07:45:25</publishTime>
@@ -581,7 +581,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/20/2014 10:47:17</publishTime>
     </File>
     <File Include="Views/Aviso/Create.cshtml">
-      <publishTime>06/02/2014 11:03:53</publishTime>
+      <publishTime>02/06/2014 11:03:53</publishTime>
     </File>
     <File Include="Views/Aviso/Delete.cshtml">
       <publishTime>05/27/2014 09:43:04</publishTime>
@@ -617,10 +617,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/06/2015 12:26:34</publishTime>
     </File>
     <File Include="Views/Escola/Ambientes.cshtml">
-      <publishTime>08/11/2014 08:29:27</publishTime>
+      <publishTime>11/08/2014 08:29:27</publishTime>
     </File>
     <File Include="Views/Escola/Contato.cshtml">
-      <publishTime>08/11/2014 10:24:09</publishTime>
+      <publishTime>11/08/2014 10:24:09</publishTime>
     </File>
     <File Include="Views/Escola/Equipe.cshtml">
       <publishTime>08/08/2014 09:41:33</publishTime>
@@ -659,13 +659,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/13/2015 09:11:09</publishTime>
     </File>
     <File Include="Views/Home/Ambientes.cshtml">
-      <publishTime>06/02/2014 10:17:24</publishTime>
+      <publishTime>02/06/2014 10:17:24</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>05/21/2014 09:17:53</publishTime>
     </File>
     <File Include="Views/Home/Contato.cshtml">
-      <publishTime>06/02/2014 10:04:08</publishTime>
+      <publishTime>02/06/2014 10:04:08</publishTime>
     </File>
     <File Include="Views/Home/EducFundamental.cshtml">
       <publishTime>08/08/2014 09:00:00</publishTime>
@@ -674,13 +674,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/08/2014 08:54:47</publishTime>
     </File>
     <File Include="Views/Home/Equipe.cshtml">
-      <publishTime>06/02/2014 10:16:07</publishTime>
+      <publishTime>02/06/2014 10:16:07</publishTime>
     </File>
     <File Include="Views/Home/Escola.cshtml">
-      <publishTime>06/02/2014 10:09:31</publishTime>
+      <publishTime>02/06/2014 10:09:31</publishTime>
     </File>
     <File Include="Views/Home/Galerias.cshtml">
-      <publishTime>06/02/2014 10:05:53</publishTime>
+      <publishTime>02/06/2014 10:05:53</publishTime>
     </File>
     <File Include="Views/Home/Horario.cshtml">
       <publishTime>03/05/2015 11:02:48</publishTime>
@@ -734,7 +734,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/05/2015 11:04:54</publishTime>
     </File>
     <File Include="Views/Shared/_Layout2.cshtml">
-      <publishTime>06/09/2014 10:03:33</publishTime>
+      <publishTime>09/06/2014 10:03:33</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>05/21/2014 09:18:10</publishTime>

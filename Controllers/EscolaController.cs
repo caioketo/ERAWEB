@@ -12,7 +12,7 @@ namespace ERAWeb.Controllers
     public class EscolaController : Controller
     {
         private ERAContext context = new ERAContext();
-        // GET: Escola
+
         public ActionResult Index()
         {
             return View();

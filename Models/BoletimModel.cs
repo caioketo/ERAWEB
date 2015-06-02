@@ -12,23 +12,29 @@ namespace ERAWeb.Models
         public int AlunoId { get; set; }
         public int DisciplinaId { get; set; }
         public virtual DisciplinaModel Disciplina { get; set; }
-        public int NotaTrim1Id { get; set; }
+        public Nullable<int> NotaTrim1Id { get; set; }
         public virtual NotasBoletim NotaTrim1 { get; set; }
-        public NotasBoletim NotaTrim2 { get; set; }
-        public NotasBoletim NotaTrim3 { get; set; }
+        public Nullable<int> NotaTrim2Id { get; set; }
+        public virtual NotasBoletim NotaTrim2 { get; set; }
+        public Nullable<int> NotaTrim3Id { get; set; }
+        public virtual NotasBoletim NotaTrim3 { get; set; }
 
 
         #region Helpers
 
-        public string DisciplinaDesc
+        public virtual string DisciplinaDesc
         {
             get
             {
+                if (Disciplina == null)
+                {
+                    return "";
+                }
                 return Disciplina.Descricao;
             }
         }
 
-        public string NotaTrim1Nota
+        public virtual string NotaTrim1Nota
         {
             get
             {
@@ -40,7 +46,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim1Rec
+        public virtual string NotaTrim1Rec
         {
             get
             {
@@ -52,7 +58,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public double DblNotaTrim1Media
+        public virtual double DblNotaTrim1Media
         {
             get
             {
@@ -64,7 +70,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim1Media
+        public virtual string NotaTrim1Media
         {
             get
             {
@@ -72,7 +78,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim1Faltas
+        public virtual string NotaTrim1Faltas
         {
             get
             {
@@ -84,7 +90,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim2Nota
+        public virtual string NotaTrim2Nota
         {
             get
             {
@@ -96,7 +102,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim2Rec
+        public virtual string NotaTrim2Rec
         {
             get
             {
@@ -108,7 +114,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public double DblNotaTrim2Media
+        public virtual double DblNotaTrim2Media
         {
             get
             {
@@ -120,7 +126,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim2Media
+        public virtual string NotaTrim2Media
         {
             get
             {
@@ -132,7 +138,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim2Faltas
+        public virtual string NotaTrim2Faltas
         {
             get
             {
@@ -144,7 +150,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim3Nota
+        public virtual string NotaTrim3Nota
         {
             get
             {
@@ -156,7 +162,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim3Rec
+        public virtual string NotaTrim3Rec
         {
             get
             {
@@ -168,7 +174,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public double DblNotaTrim3Media
+        public virtual double DblNotaTrim3Media
         {
             get
             {
@@ -180,7 +186,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim3Media
+        public virtual string NotaTrim3Media
         {
             get
             {
@@ -192,7 +198,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string NotaTrim3Faltas
+        public virtual string NotaTrim3Faltas
         {
             get
             {
@@ -204,7 +210,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public int IntTotalFaltas
+        public virtual int IntTotalFaltas
         {
             get
             {
@@ -225,7 +231,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string TotalFaltas
+        public virtual string TotalFaltas
         {
             get
             {
@@ -233,7 +239,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public int IntAulasDadas
+        public virtual int IntAulasDadas
         {
             get
             {
@@ -254,7 +260,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string AulasDadas
+        public virtual string AulasDadas
         {
             get
             {
@@ -262,7 +268,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public int IntFreq
+        public virtual int IntFreq
         {
             get
             {
@@ -274,7 +280,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string Freq
+        public virtual string Freq
         {
             get
             {
@@ -282,7 +288,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public double DblTotalPontos
+        public virtual double DblTotalPontos
         {
             get
             {
@@ -290,7 +296,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string TotalPontos
+        public virtual string TotalPontos
         {
             get
             {
@@ -298,7 +304,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public double DblMediaGeral
+        public virtual double DblMediaGeral
         {
             get
             {
@@ -319,7 +325,7 @@ namespace ERAWeb.Models
             }
         }
 
-        public string MediaGeral
+        public virtual string MediaGeral
         {
             get
             {

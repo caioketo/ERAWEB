@@ -127,3 +127,5 @@ C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.csproj.GenerateResource
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.dll
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.pdb
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.Teste.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.Boletins.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.BoletinsNullable.resources

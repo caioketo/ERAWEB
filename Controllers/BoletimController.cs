@@ -7,12 +7,47 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ERAWeb.Models;
+using System.Text;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+using ERAWeb.Models.JSON;
 
 namespace ERAWeb.Controllers
 {
     public class BoletimController : Controller
     {
         private ERAContext db = new ERAContext();
+
+        [HttpPost]
+        public string CreateJSON(string boletimJSON)
+        {
+            boletimJSON = Encoding.UTF8.GetString(Convert.FromBase64String(boletimJSON));
+            BoletimModel boletimModel = new BoletimModel();
+            var serializer = new JavaScriptSerializer();
+            boletimModel = JsonConvert.DeserializeObject<BoletimModel>(boletimJSON);
+            boletimModel.DataAlteracao = DateTime.Now;
+            boletimModel.DataCriacao = DateTime.Now;
+            if (boletimModel.NotaTrim1 != null)
+            {
+                boletimModel.NotaTrim1.DataAlteracao = DateTime.Now;
+                boletimModel.NotaTrim1.DataCriacao = DateTime.Now;
+            }
+            if (boletimModel.NotaTrim2 != null)
+            {
+                boletimModel.NotaTrim2.DataAlteracao = DateTime.Now;
+                boletimModel.NotaTrim2.DataCriacao = DateTime.Now;
+            }
+            if (boletimModel.NotaTrim3 != null)
+            {
+                boletimModel.NotaTrim3.DataAlteracao = DateTime.Now;
+                boletimModel.NotaTrim3.DataCriacao = DateTime.Now;
+            }
+
+            db.BoletimModels.Add(boletimModel);
+            db.SaveChanges();
+            return serializer.Serialize(boletimModel);
+        }
+
 
         // GET: Boletim
         public ActionResult Index(int? id)

@@ -185,6 +185,14 @@
     <Compile Include="Migrations\201505201738154_Teste.Designer.cs">
       <DependentUpon>201505201738154_Teste.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506011403465_Boletins.cs" />
+    <Compile Include="Migrations\201506011403465_Boletins.Designer.cs">
+      <DependentUpon>201506011403465_Boletins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506011435003_BoletinsNullable.cs" />
+    <Compile Include="Migrations\201506011435003_BoletinsNullable.Designer.cs">
+      <DependentUpon>201506011435003_BoletinsNullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArquivoModel.cs" />
@@ -467,6 +475,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505201738154_Teste.resx">
       <DependentUpon>201505201738154_Teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506011403465_Boletins.resx">
+      <DependentUpon>201506011403465_Boletins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506011435003_BoletinsNullable.resx">
+      <DependentUpon>201506011435003_BoletinsNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

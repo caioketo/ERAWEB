@@ -182,3 +182,5 @@ C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.dll
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.pdb
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.csprojResolveAssemblyReference.cache
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.Teste.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.Boletins.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.BoletinsNullable.resources
