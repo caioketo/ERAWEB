@@ -18,6 +18,26 @@ namespace ERAWeb.Controllers
     {
         private ERAContext db = new ERAContext();
 
+
+        [HttpPost]
+        public string CreateAlunoJSON(string alunoJSON)
+        {
+            alunoJSON = Encoding.UTF8.GetString(Convert.FromBase64String(alunoJSON));
+            AlunoModel alunoModel = new AlunoModel();
+            var serializer = new JavaScriptSerializer();
+            alunoModel = JsonConvert.DeserializeObject<AlunoModel>(alunoJSON);
+            alunoModel.DataAlteracao = DateTime.Now;
+            alunoModel.DataCriacao = DateTime.Now;
+
+            if (db.AlunoModels.Where(a => a.CId == alunoModel.CId).ToList().Count <= 0)
+            {
+                db.AlunoModels.Add(alunoModel);
+                db.SaveChanges();
+            }
+
+            return serializer.Serialize(alunoModel);
+        }
+
         [HttpPost]
         public string CreateJSON(string boletimJSON)
         {
@@ -42,17 +62,22 @@ namespace ERAWeb.Controllers
                 boletimModel.NotaTrim3.DataAlteracao = DateTime.Now;
                 boletimModel.NotaTrim3.DataCriacao = DateTime.Now;
             }
+            boletimModel.Aluno = db.AlunoModels.Where(a => a.CId == boletimModel.AlunoCId).FirstOrDefault();
 
             db.BoletimModels.Add(boletimModel);
             db.SaveChanges();
             return serializer.Serialize(boletimModel);
         }
 
+        public ActionResult Alunos()
+        {
+            return View(db.AlunoModels.OrderBy(a => a.Ano).ThenBy(a => a.Turma).ThenBy(a => a.Numero).ToList());
+        }
 
         // GET: Boletim
         public ActionResult Index(int? id)
         {
-            return View(db.BoletimModels.Where(b => b.AlunoId == id).ToList());
+            return View(db.BoletimModels.Where(b => b.AlunoCId == id).ToList());
         }
 
         // GET: Boletim/Details/5

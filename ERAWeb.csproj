@@ -193,8 +193,21 @@
     <Compile Include="Migrations\201506011435003_BoletinsNullable.Designer.cs">
       <DependentUpon>201506011435003_BoletinsNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506081051124_AlunoJSON.cs" />
+    <Compile Include="Migrations\201506081051124_AlunoJSON.Designer.cs">
+      <DependentUpon>201506081051124_AlunoJSON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506081129431_AlunoJSON2.cs" />
+    <Compile Include="Migrations\201506081129431_AlunoJSON2.Designer.cs">
+      <DependentUpon>201506081129431_AlunoJSON2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506081212048_AlunoJSON3.cs" />
+    <Compile Include="Migrations\201506081212048_AlunoJSON3.Designer.cs">
+      <DependentUpon>201506081212048_AlunoJSON3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AlunoModel.cs" />
     <Compile Include="Models\ArquivoModel.cs" />
     <Compile Include="Models\AvisoListModel.cs" />
     <Compile Include="Models\AvisoModel.cs" />
@@ -451,6 +464,7 @@
     <Content Include="Views\Boletim\Index.cshtml" />
     <Content Include="Views\Home\Horario.cshtml" />
     <Content Include="Views\Home\Amalia.cshtml" />
+    <Content Include="Views\Boletim\Alunos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -481,6 +495,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506011435003_BoletinsNullable.resx">
       <DependentUpon>201506011435003_BoletinsNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506081051124_AlunoJSON.resx">
+      <DependentUpon>201506081051124_AlunoJSON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506081129431_AlunoJSON2.resx">
+      <DependentUpon>201506081129431_AlunoJSON2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506081212048_AlunoJSON3.resx">
+      <DependentUpon>201506081212048_AlunoJSON3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

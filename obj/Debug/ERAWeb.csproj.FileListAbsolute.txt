@@ -184,3 +184,6 @@ C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.csprojResolveAssemblyRefe
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.Teste.resources
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.Boletins.resources
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.BoletinsNullable.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.AlunoJSON.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.AlunoJSON2.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.AlunoJSON3.resources

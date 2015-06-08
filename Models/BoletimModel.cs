@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,8 @@ namespace ERAWeb.Models
 {
     public class BoletimModel : BaseEntity
     {
-        //public AlunoModel Aluno { get; set; }
-        public int AlunoId { get; set; }
+        public int AlunoCId { get; set; }
+        public virtual AlunoModel Aluno { get; set; }
         public int DisciplinaId { get; set; }
         public virtual DisciplinaModel Disciplina { get; set; }
         public Nullable<int> NotaTrim1Id { get; set; }

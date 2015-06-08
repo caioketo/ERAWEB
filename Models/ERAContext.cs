@@ -62,16 +62,12 @@ namespace ERAWeb.Models
         public DbSet<ProvaModel> Provas { get; set; }
         public DbSet<DisciplinaModel> DisciplinaModels { get; set; }
         public DbSet<TurmaModel> TurmaModels { get; set; }
-
-        public System.Data.Entity.DbSet<ERAWeb.Models.EventoModel> EventoModels { get; set; }
-
-        public System.Data.Entity.DbSet<ERAWeb.Models.AvisoModel> AvisoModels { get; set; }
-
-        public System.Data.Entity.DbSet<ERAWeb.Models.ArquivoModel> ArquivoModels { get; set; }
-
-        public System.Data.Entity.DbSet<ERAWeb.Models.CursoModel> CursoModels { get; set; }
-
-        public System.Data.Entity.DbSet<ERAWeb.Models.BoletimModel> BoletimModels { get; set; }
+        public DbSet<ERAWeb.Models.EventoModel> EventoModels { get; set; }
+        public DbSet<ERAWeb.Models.AvisoModel> AvisoModels { get; set; }
+        public DbSet<ERAWeb.Models.ArquivoModel> ArquivoModels { get; set; }
+        public DbSet<ERAWeb.Models.CursoModel> CursoModels { get; set; }
+        public DbSet<ERAWeb.Models.BoletimModel> BoletimModels { get; set; }
+        public DbSet<AlunoModel> AlunoModels { get; set; }
 
     }
 }
