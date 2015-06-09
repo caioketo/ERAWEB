@@ -187,3 +187,4 @@ C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.BoletinsNullab
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.AlunoJSON.resources
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.AlunoJSON2.resources
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.AlunoJSON3.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Debug\ERAWeb.Migrations.UsuarioSenha.resources

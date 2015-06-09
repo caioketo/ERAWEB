@@ -19,5 +19,7 @@ namespace ERAWeb.Models
         public int Ano { get; set; }
         public string Turma { get; set; }
         public int Numero { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
     }
 }

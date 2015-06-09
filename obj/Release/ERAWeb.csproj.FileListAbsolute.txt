@@ -129,3 +129,6 @@ C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.pdb
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.Teste.resources
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.Boletins.resources
 C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.BoletinsNullable.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.AlunoJSON.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.AlunoJSON2.resources
+C:\Users\Caio\Documents\GitHub\ERAWEB\obj\Release\ERAWeb.Migrations.AlunoJSON3.resources

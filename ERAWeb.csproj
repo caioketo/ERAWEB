@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201506081212048_AlunoJSON3.Designer.cs">
       <DependentUpon>201506081212048_AlunoJSON3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506091409591_UsuarioSenha.cs" />
+    <Compile Include="Migrations\201506091409591_UsuarioSenha.Designer.cs">
+      <DependentUpon>201506091409591_UsuarioSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AlunoModel.cs" />
@@ -504,6 +508,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506081212048_AlunoJSON3.resx">
       <DependentUpon>201506081212048_AlunoJSON3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506091409591_UsuarioSenha.resx">
+      <DependentUpon>201506091409591_UsuarioSenha.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

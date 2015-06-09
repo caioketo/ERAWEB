@@ -1190,6 +1190,7 @@ border:1px solid #8ED058;-webkit-box-shadow: #474747 0px 0px 5px ;-moz-box-shado
 
 .customBody {
     padding: 10px;
+    border-style:none;
 }
 
 div#captioned-gallery { width: 100%; overflow: hidden; }
