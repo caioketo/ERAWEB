@@ -10,20 +10,20 @@
 <br />
 <br />
 <br />
-<table border="2" cellpadding="10px" cellspacing="10px" style="width:100%; border-style:none; text-align:center">
+<table border="2" cellpadding="10px" cellspacing="10px" style="width:100%; border-style:none; text-align:center; font-size: large">
     <tbody class="customBody">
         <tr style="border-style:none">
             <td>
                 <img src="~/Content/logo.png" style="height: 80px" />
             </td>
-            <td colspan="12" style="font-size:large">
+            <td colspan="12" style="font-size:larger">
                 Aluno: @Model.First().Aluno.Nome
                 <br />
                 @Model.First().Aluno.UPCATN
             </td>
         </tr>
         <tr style="border-style:none">
-            <td rowspan="2">
+            <td rowspan="2" style="width: 260px">
                 Disciplina
             </td>
             <td colspan="4">1º Trimestre</td>
@@ -112,14 +112,18 @@
                 </td>
             </tr>
         }
+        </tbody>
+    </table>
+<table border="2" cellpadding="10px" cellspacing="10px" style="width:100%; border-style:none; text-align:center; font-size: large">
 
+    <tbody class="customBody">
         <tr style="border-style:none">
             <td colspan="13" style="text-align:center">
                 ** RESULTADOS PARCIAIS E FINAIS DO ALUNO **
             </td>
         </tr>
         <tr style="border-style:none">
-            <td>Disciplina</td>
+            <td style="width: 260px">Disciplina</td>
             <td>TOT. FAL.</td>
             <td>AULAS DADAS</td>
             <td>% FREQUÊNCIA</td>

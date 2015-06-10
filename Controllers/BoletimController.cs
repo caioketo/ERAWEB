@@ -11,6 +11,7 @@ using System.Text;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using ERAWeb.Models.JSON;
+using System.Security.Cryptography;
 
 namespace ERAWeb.Controllers
 {
@@ -77,7 +78,66 @@ namespace ERAWeb.Controllers
         // GET: Boletim
         public ActionResult Index(int? id)
         {
-            return View(db.BoletimModels.Where(b => b.AlunoCId == id).ToList());
+            try
+            {
+                if (Request.Cookies["AuthID"].Value == Session["AuthID"].ToString())
+                {
+                    return View(db.BoletimModels.Where(b => b.AlunoCId == id).ToList());
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Escola");
+                }
+            }
+            catch
+            {
+                return RedirectToAction("Index", "Escola");
+            }
+        }
+
+        private string RandomString(int size)
+        {
+            StringBuilder builder = new StringBuilder();
+            Random random = new Random();
+            char ch;
+            for (int i = 0; i < size; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+            return builder.ToString();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(LoginModel loginModel)
+        {
+            if (db.AlunoModels.Where(a => a.Email.Equals(loginModel.Email)).ToList().Count() > 0)
+            {
+                AlunoModel aluno = db.AlunoModels.Where(a => a.Email.Equals(loginModel.Email)).FirstOrDefault();
+                if (aluno.Senha.Equals(loginModel.Password))
+                {
+                    RNGCryptoServiceProvider rngProvider = new RNGCryptoServiceProvider();
+                    byte[] myKey = new byte[48];
+                    rngProvider.GetBytes(myKey);
+                    string sessionID = null;
+                    myKey.ToList().ForEach(b => sessionID += b.ToString("x2"));
+                    Console.WriteLine(sessionID);
+
+                    Session["AuthID"] = sessionID;
+
+                    var cookie = new HttpCookie("AuthID");
+                    cookie.Value = sessionID;
+                    Response.Cookies.Add(cookie);
+                    return RedirectToAction("Index", new { id = aluno.CId });
+                }
+            }
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
         }
 
         // GET: Boletim/Details/5

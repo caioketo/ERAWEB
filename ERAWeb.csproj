@@ -227,6 +227,7 @@
     <Compile Include="Models\LicaoJSON.cs" />
     <Compile Include="Models\LicaoListModel.cs" />
     <Compile Include="Models\LicaoModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\NotasBoletim.cs" />
     <Compile Include="Models\PeriodoModel.cs" />
@@ -469,6 +470,7 @@
     <Content Include="Views\Home\Horario.cshtml" />
     <Content Include="Views\Home\Amalia.cshtml" />
     <Content Include="Views\Boletim\Alunos.cshtml" />
+    <Content Include="Views\Boletim\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

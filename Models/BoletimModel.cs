@@ -51,7 +51,7 @@ namespace ERAWeb.Models
         {
             get
             {
-                if (NotaTrim1 == null || NotaTrim1.Rec < 0)
+                if (NotaTrim1 == null || NotaTrim1.Rec < 0 || NotaTrim1.Nota >= 6)
                 {
                     return "";
                 }
@@ -67,7 +67,18 @@ namespace ERAWeb.Models
                 {
                     return 0;
                 }
-                return NotaTrim1.Media;
+                if (NotaTrim1.Nota < 6)
+                {
+                    if ((NotaTrim1.Nota + NotaTrim1.Rec) / 2 < NotaTrim1.Nota)
+                    {
+                        return NotaTrim1.Nota;
+                    }
+                    else
+                    {
+                        return (NotaTrim1.Nota + NotaTrim1.Rec) / 2;
+                    }
+                }
+                return NotaTrim1.Nota;
             }
         }
 

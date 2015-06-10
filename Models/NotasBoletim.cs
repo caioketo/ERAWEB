@@ -12,5 +12,20 @@ namespace ERAWeb.Models
         public double Media { get; set; }
         public int Faltas { get; set; }
         public int AulasDadas { get; set; }
+
+        public string Recuperacao
+        {
+            get
+            {
+                if (Rec > 0)
+                {
+                    return Rec.ToString();
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
     }
 }
