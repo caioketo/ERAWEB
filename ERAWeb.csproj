@@ -211,6 +211,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AlterarSenhaModel.cs" />
     <Compile Include="Models\AlunoModel.cs" />
     <Compile Include="Models\ArquivoModel.cs" />
     <Compile Include="Models\AvisoListModel.cs" />
@@ -256,6 +257,7 @@
     <Content Include="Content\chromaton-red.css" />
     <Content Include="Content\datepicker.css" />
     <Content Include="Content\datepicker3.css" />
+    <Content Include="Content\encontro.jpg" />
     <Content Include="Content\estilos2.css" />
     <Content Include="Content\estilos.css" />
     <Content Include="Content\fancybox_buttons.png" />
@@ -471,6 +473,7 @@
     <Content Include="Views\Home\Amalia.cshtml" />
     <Content Include="Views\Boletim\Alunos.cshtml" />
     <Content Include="Views\Boletim\Login.cshtml" />
+    <Content Include="Views\Boletim\AlterarSenha.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

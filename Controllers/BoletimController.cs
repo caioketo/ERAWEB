@@ -108,6 +108,45 @@ namespace ERAWeb.Controllers
             return builder.ToString();
         }
 
+        public ActionResult AlterarSenha()
+        {
+            try
+            {
+                if (Request.Cookies["AuthID"].Value == Session["AuthID"].ToString())
+                {
+                    return View();
+                }
+                else
+                {
+                    return RedirectToAction("Login", "Boletim");
+                }
+            }
+            catch
+            {
+                return RedirectToAction("Login", "Boletim");
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AlterarSenha(AlterarSenhaModel alteraModel)
+        {
+            int cId = (int)Session["AlunoID"];
+            AlunoModel aluno = db.AlunoModels.Where(a => a.CId == cId).First();
+            if (aluno != null)
+            {
+                if (alteraModel.senhaAntiga.Equals(aluno.Senha))
+                {
+                    aluno.Senha = alteraModel.senhaNova;
+                    db.Entry(aluno).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+            }
+
+            return View();
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel loginModel)
@@ -125,7 +164,7 @@ namespace ERAWeb.Controllers
                     Console.WriteLine(sessionID);
 
                     Session["AuthID"] = sessionID;
-
+                    Session["AlunoID"] = aluno.CId;
                     var cookie = new HttpCookie("AuthID");
                     cookie.Value = sessionID;
                     Response.Cookies.Add(cookie);
