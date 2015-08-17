@@ -10,6 +10,8 @@ namespace ERAWeb.Models
     public class LicaoModel : BaseEntity
     {
         [Display(Name="Data da Lição")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataLicao { get; set; }
         public virtual string DataLicaoFormatada
         {

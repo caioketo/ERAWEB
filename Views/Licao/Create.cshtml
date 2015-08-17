@@ -19,14 +19,14 @@
             <span class="h2">
                 <b>@Html.DisplayNameFor(model => model.DataLicao)</b>
             </span>
-            @Html.TextBoxFor(model => model.DataLicao, new { @class = "form-control datepicker", placeholder = "Selecione a data..." })
-            @Html.ValidationMessageFor(model => model.DataLicao)
+            <br />
+            @Html.EditorFor(model => model.DataLicao, new { @class = "form-control", type = "date" })
         </p>    
         <span class="h2">
             <b>Data de Entrega da Lição</b>
         </span>
         <input class="form-control datepicker" data-val="true"
-               id="DataEntregaLicao" name="DataEntregaLicao" placeholder="Selecione a data..." type="text" value="">
+               id="DataEntregaLicao" name="DataEntregaLicao" placeholder="Selecione a data..." type="date" value="">
 
 
         <p>
@@ -68,8 +68,26 @@
     @Scripts.Render("~/bundles/jquery-ui")
 
     <script type="text/javascript">
-        $(function () { // will trigger when the document is ready
-            $('.form-control datepicker').datepicker(); //Initialise any date pickers
+        $(function () {
+            $.validator.methods.date = function (value, element) {
+                var _date = $.validator.methods.date;
+
+                $.validator.methods.date = function (value, element) {
+                    return _date.call(this, Globalize.parseDate(value), element);
+                };
+            }
+        });
+        /*$(document).ready(function () { // will trigger when the document is ready
+            $('.form-control datepicker').datepicker({
+                dateFormat: "dd/mm/yy",
+                showStatus: true,
+                showWeeks: true,
+                currentText: 'Now',
+                autoSize: true,
+                gotoCurrent: true,
+                showAnim: 'blind',
+                highlightWeek: true
+            });
         });
     </script>
 }
